@@ -1,0 +1,32 @@
+{
+  "business_name": "Pakar Gearbox Shah Alam",
+  "city": "Shah Alam",
+  "state": "Selangor",
+  "phone": "+60 3-5191 8330",
+  "whatsapp": "+60 19-518 3330",
+  "address": "No 15, Jalan Industri 16/12, Seksyen 16, 40200 Shah Alam, Selangor",
+  "postal_code": "40200",
+  "google_maps": "https://maps.google.com/?q=Pakar+Gearbox+Shah+Alam",
+  "coordinates": {
+    "latitude": "3.0738",
+    "longitude": "101.5183"
+  },
+  "business_hours": {
+    "monday": "9:00-18:00",
+    "tuesday": "9:00-18:00", 
+    "wednesday": "9:00-18:00",
+    "thursday": "9:00-18:00",
+    "friday": "9:00-18:00",
+    "saturday": "9:00-17:00",
+    "sunday": "Tutup"
+  },
+  "email": "info@pakargearboxshahalam.com",
+  "website": "https://pakargearboxshahalam.com",
+  "established_year": "2015",
+  "services_count": "500+",
+  "customer_rating": "4.8",
+  "warranty_months": "6",
+  "primary_color": "#111111",
+  "accent_color": "#E50914",
+  "meta_keywords": "pakar gearbox shah alam, gearbox repair shah alam, cvt specialist shah alam, gearbox overhaul shah alam, gearbox service shah alam, gearbox diagnosis shah alam"
+}
