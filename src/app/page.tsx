@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Header from '../components/Header'
+import AnalyticsDebug from '../components/AnalyticsDebug'
 
 export default function HomePage() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -944,6 +945,9 @@ export default function HomePage() {
       >
         <MessageCircle className="w-6 h-6 text-white" />
       </motion.a>
+
+      {/* Debug Component - Remove in production */}
+      <AnalyticsDebug />
     </div>
   )
 }

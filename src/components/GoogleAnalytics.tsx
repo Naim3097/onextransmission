@@ -64,7 +64,19 @@ export function GoogleAnalytics() {
             gtag('config', '${GA_ID}', {
               page_title: document.title,
               page_location: window.location.href,
+              debug_mode: true,
+              send_page_view: true
             });
+            
+            // Debug function - available in console
+            window.debugAnalytics = function() {
+              console.log('=== ANALYTICS DEBUG ===');
+              console.log('GTM ID:', '${GTM_ID}');
+              console.log('GA4 ID:', '${GA_ID}');
+              console.log('DataLayer:', window.dataLayer);
+              console.log('GTM Container:', document.querySelector('script[src*="googletagmanager.com/gtm.js"]'));
+              console.log('GA4 Script:', document.querySelector('script[src*="gtag/js"]'));
+            };
           `,
         }}
       />
