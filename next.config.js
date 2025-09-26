@@ -22,32 +22,7 @@ const nextConfig = {
     ADDRESS: 'No 15, Jalan Industri 16/12, Seksyen 16, 40200 Shah Alam, Selangor',
     CITY: 'Shah Alam',
     STATE: 'Selangor'
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ]
-  },
+  }
 }
 
 module.exports = nextConfig

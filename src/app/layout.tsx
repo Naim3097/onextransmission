@@ -1,6 +1,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Metadata } from 'next'
+import { GTMHead, GTMBody, GoogleAnalytics } from '../components/GoogleAnalytics'
+
+// Auto-deployment test - deployed via Vercel
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -57,6 +60,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -113,22 +117,18 @@ export default function RootLayout({
             })
           }}
         />
+        
+        {/* Google Tag Manager */}
+        <GTMHead />
+        
+        {/* Google Analytics 4 */}
+        <GoogleAnalytics />
       </head>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        {/* Google Tag Manager (noscript) */}
+        <GTMBody />
         
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID');
-            `
-          }}
-        />
+        {children}
       </body>
     </html>
   )

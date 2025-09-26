@@ -9,6 +9,7 @@ import {
   X,
   Wrench
 } from 'lucide-react'
+import { trackPhoneCall, trackWhatsAppClick } from './GoogleAnalytics'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -30,6 +31,14 @@ export default function Header({ currentPage }: HeaderProps) {
 
   const whatsappNumber = '+601131051677'
   const phoneNumber = '+601131051677'
+
+  const handlePhoneClick = () => {
+    trackPhoneCall(phoneNumber)
+  }
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick(whatsappNumber)
+  }
 
   const navigation = [
     { name: 'Utama', href: '/', key: 'home' },
@@ -88,6 +97,7 @@ export default function Header({ currentPage }: HeaderProps) {
           <div className="hidden md:flex items-center space-x-3">
             <motion.a
               href="tel:+601131051677"
+              onClick={handlePhoneClick}
               className="flex items-center space-x-2 px-4 py-2 bg-black hover:bg-red-900/30 rounded-lg transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -99,6 +109,7 @@ export default function Header({ currentPage }: HeaderProps) {
               href="https://wa.link/0hmj0n"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -143,6 +154,7 @@ export default function Header({ currentPage }: HeaderProps) {
             <div className="flex space-x-2 pt-3 border-t border-red-900/30">
               <a
                 href={`tel:${phoneNumber}`}
+                onClick={handlePhoneClick}
                 className="flex-1 flex items-center justify-center space-x-2 px-3 py-2.5 bg-black rounded-lg text-sm"
               >
                 <Phone className="w-4 h-4" />
@@ -152,6 +164,7 @@ export default function Header({ currentPage }: HeaderProps) {
                 href="https://wa.link/0hmj0n"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
                 className="flex-1 flex items-center justify-center space-x-2 px-3 py-2.5 bg-green-600 rounded-lg text-sm"
               >
                 <MessageCircle className="w-4 h-4" />
