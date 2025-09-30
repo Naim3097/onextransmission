@@ -118,11 +118,8 @@ export default function RootLayout({
           }}
         />
         
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - Handles all tracking */}
         <GTMHead />
-        
-        {/* Google Analytics 4 */}
-        <GoogleAnalytics />
       </head>
       <body className={`${inter.className} antialiased`}>
         {/* Google Tag Manager (noscript) */}
