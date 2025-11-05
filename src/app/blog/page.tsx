@@ -102,6 +102,12 @@ export default function BlogPage() {
     ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory)
 
+  // Debug logging
+  useEffect(() => {
+    console.log('Selected Category:', selectedCategory)
+    console.log('Filtered Posts:', filteredPosts)
+  }, [selectedCategory])
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -216,17 +222,29 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section className="py-16 md:py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          {filteredPosts.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-16"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-900 mb-4">
+                <MessageCircle className="w-8 h-8 text-gray-600" />
+              </div>
+              <p className="text-gray-400 text-lg">Tiada artikel dalam kategori ini buat masa sekarang.</p>
+              <p className="text-gray-500 text-sm mt-2">Cuba pilih kategori lain atau hubungi kami untuk maklumat lanjut.</p>
+            </motion.div>
+          ) : (
+          <div 
             key={selectedCategory}
-            variants={staggerChildren}
-            initial="hidden"
-            animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           >
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post, index) => (
               <motion.article
                 key={post.id}
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className="bg-gray-900 border border-gray-800 hover:border-red-500/50 rounded-2xl overflow-hidden transition-all duration-300 group flex flex-col h-full"
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(239, 68, 68, 0.1)' }}
               >
@@ -297,21 +315,7 @@ export default function BlogPage() {
                 </div>
               </motion.article>
             ))}
-          </motion.div>
-
-          {/* No posts message */}
-          {filteredPosts.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-900 mb-4">
-                <MessageCircle className="w-8 h-8 text-gray-600" />
-              </div>
-              <p className="text-gray-400 text-lg">Tiada artikel dalam kategori ini buat masa sekarang.</p>
-              <p className="text-gray-500 text-sm mt-2">Cuba pilih kategori lain atau hubungi kami untuk maklumat lanjut.</p>
-            </motion.div>
+          </div>
           )}
         </div>
       </section>
