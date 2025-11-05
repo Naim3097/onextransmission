@@ -514,12 +514,6 @@ export default function KalkulatorHargaPage() {
               animate="visible"
               className="space-y-10"
             >
-              {/* Badge */}
-              <motion.div variants={fadeInUp} className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-red-600/20 to-red-800/20 border border-red-500/30 rounded-full px-8 py-3 backdrop-blur-sm">
-                <Calculator className="w-5 h-5 text-red-400" />
-                <span className="text-red-300 font-semibold">Alat Kalkulator Percuma 2025</span>
-              </motion.div>
-
               {/* Main Heading */}
               <motion.div variants={fadeInUp} className="space-y-4">
                 <h1 
@@ -738,7 +732,7 @@ export default function KalkulatorHargaPage() {
                 )}
               </div>
 
-              {/* Price Result */}
+              {/* Price Result - Minimalist Design */}
               <AnimatePresence>
                 {showResult && (
                   <motion.div
@@ -746,110 +740,101 @@ export default function KalkulatorHargaPage() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="mt-8 bg-gradient-to-br from-red-900/20 to-red-950/10 border-2 border-red-500/30 rounded-2xl p-8 shadow-2xl shadow-red-500/20"
+                    className="mt-12"
                   >
-                    {/* Result Header */}
-                    <div className="text-center mb-6">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 border-2 border-green-500 mb-4">
-                        <CheckCircle className="w-8 h-8 text-green-500" />
+                    {/* Minimalist Result Card */}
+                    <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800 rounded-3xl p-10 md:p-12">
+                      
+                      {/* Car Info - Subtle */}
+                      <div className="text-center mb-8">
+                        <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Anggaran untuk</p>
+                        <h3 className="text-xl md:text-2xl font-light text-gray-300">
+                          {carBrands.find(b => b.value === selectedBrand)?.label} {selectedModel.toUpperCase()}
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-2">{serviceTypes.find(s => s.value === serviceType)?.label}</p>
                       </div>
-                      <h3 className="text-2xl font-bold mb-2">
-                        Anggaran Harga Untuk {carBrands.find(b => b.value === selectedBrand)?.label} {selectedModel.toUpperCase()}
-                      </h3>
-                      <p className="text-gray-400">Jenis Servis: {serviceTypes.find(s => s.value === serviceType)?.label}</p>
-                    </div>
 
-                    {/* Price Display */}
-                    <div className="text-center py-8 border-y border-red-500/30">
-                      <p className="text-gray-400 text-sm mb-2">Anggaran Kos</p>
-                      <div className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
-                        RM {estimatedPrice.min.toLocaleString()} - RM {estimatedPrice.max.toLocaleString()}
-                      </div>
-                      <p className="text-gray-500 text-xs mt-3">*Harga sebenar bergantung pada diagnosis</p>
-                    </div>
-
-                    {/* What's Included */}
-                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Diagnosis komputer percuma</span>
-                      </div>
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Minyak gearbox spec original</span>
-                      </div>
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Parts berkualiti (original/OEM)</span>
-                      </div>
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Warranty 6 hingga 12 bulan</span>
-                      </div>
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Test drive selepas servis</span>
-                      </div>
-                      <div className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300">Nasihat penyelenggaraan percuma</span>
-                      </div>
-                    </div>
-
-                    {/* Price Factors Alert */}
-                    <div className="mt-6 bg-gray-900/50 border border-yellow-500/30 rounded-xl p-4">
-                      <div className="flex items-start space-x-3">
-                        <Info className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <h4 className="text-yellow-500 font-semibold mb-2">⚠️ Harga Bergantung Pada:</h4>
-                          <ul className="text-sm text-gray-400 space-y-1">
-                            <li>• Tahun kereta (older = more expensive parts)</li>
-                            <li>• Severity masalah (diagnosis tepat diperlukan)</li>
-                            <li>• Jenis parts (original vs OEM vs recond)</li>
-                            <li>• Lokasi/availability parts</li>
-                          </ul>
+                      {/* Price Display - Clean & Bold */}
+                      <div className="text-center py-10 border-y border-gray-800/50">
+                        <div className="space-y-3">
+                          <p className="text-xs uppercase tracking-widest text-gray-600">Julat Harga</p>
+                          <div className="text-4xl md:text-5xl lg:text-6xl font-light text-white">
+                            RM {estimatedPrice.min.toLocaleString()}
+                            <span className="text-gray-600 mx-4">—</span>
+                            RM {estimatedPrice.max.toLocaleString()}
+                          </div>
+                          <p className="text-xs text-gray-600 mt-4">Harga bergantung pada diagnosis tepat</p>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Action Buttons */}
-                    <div className="mt-8 space-y-4">
-                      {/* Primary CTA - WhatsApp */}
-                      <a
-                        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(getWhatsAppMessage())}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 text-center group"
-                      >
-                        <div className="flex items-center justify-center space-x-2">
-                          <MessageCircle className="w-5 h-5" />
-                          <span>Dapatkan Quotation Tepat Percuma</span>
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      {/* What's Included - Minimal List */}
+                      <div className="mt-10 mb-10">
+                        <p className="text-xs uppercase tracking-widest text-gray-600 mb-6 text-center">Termasuk</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 max-w-2xl mx-auto">
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Diagnosis percuma</span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Minyak spec original</span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Parts berkualiti</span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Warranty 6-12 bulan</span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Test drive</span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-400">
+                            <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                            <span>Nasihat percuma</span>
+                          </div>
                         </div>
-                      </a>
+                      </div>
 
-                      {/* Secondary CTA - External Link */}
-                      <a
-                        href="https://www.hargarepairgearbox.com/"
-                        target="_blank"
-                        rel="noopener"
-                        onClick={trackExternalLinkClick}
-                        className="block w-full border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 text-center group"
-                      >
-                        <div className="flex items-center justify-center space-x-2">
-                          <DollarSign className="w-5 h-5" />
-                          <span>Lihat Harga Lengkap 200+ Model Kereta</span>
-                          <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                        </div>
-                      </a>
+                      {/* Action Buttons - Minimalist */}
+                      <div className="space-y-3 max-w-md mx-auto">
+                        {/* Primary CTA - WhatsApp */}
+                        <a
+                          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(getWhatsAppMessage())}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full bg-red-600 hover:bg-red-700 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 text-center group"
+                        >
+                          <div className="flex items-center justify-center space-x-2">
+                            <MessageCircle className="w-5 h-5" />
+                            <span>Dapatkan Quotation Tepat</span>
+                          </div>
+                        </a>
 
-                      {/* Tertiary CTA - Visit Shop */}
-                      <Link
-                        href="/hubungi"
-                        className="block w-full text-center text-gray-400 hover:text-red-500 transition-colors text-sm underline"
-                      >
-                        Lawati Bengkel Kami
-                      </Link>
+                        {/* Secondary CTA - External Link */}
+                        <a
+                          href="https://www.hargarepairgearbox.com/"
+                          target="_blank"
+                          rel="noopener"
+                          onClick={trackExternalLinkClick}
+                          className="block w-full border border-gray-700 hover:border-red-500 text-gray-400 hover:text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 text-center group"
+                        >
+                          <div className="flex items-center justify-center space-x-2">
+                            <span>Lihat 200+ Model Kereta</span>
+                            <ExternalLink className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                        </a>
+
+                        {/* Tertiary CTA - Visit Shop */}
+                        <Link
+                          href="/hubungi"
+                          className="block w-full text-center text-gray-400 hover:text-red-500 transition-colors text-sm py-3"
+                        >
+                          Lawati Bengkel Kami
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 )}
