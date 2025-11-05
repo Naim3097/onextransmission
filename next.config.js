@@ -19,7 +19,7 @@ const nextConfig = {
     BUSINESS_NAME: 'Pakar Gearbox Shah Alam',
     PHONE_NUMBER: '+60351918330',
     WHATSAPP_NUMBER: '+60195183330',
-    ADDRESS: 'No 15, Jalan Industri 16/12, Seksyen 16, 40200 Shah Alam, Selangor',
+    ADDRESS: 'GF LOT 184107 (LOT LAMA 3579), JALAN HAJI TAIB, BATU 7 1/2, Jln Kebun Tambahan, Kampung Jln Kebun, 40460 Shah Alam, Selangor',
     CITY: 'Shah Alam',
     STATE: 'Selangor'
   }

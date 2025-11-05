@@ -257,7 +257,7 @@ export default function GalleryPage() {
                 </div>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-red-400 mt-0.5" />
-                  <span>No 15, Jalan Industri 16/12<br />Shah Alam, Selangor</span>
+                  <span>GF LOT 184107, JALAN HAJI TAIB, BATU 7 1/2<br />40460 Shah Alam, Selangor</span>
                 </div>
               </div>
             </div>

@@ -424,7 +424,7 @@ export default function KhidmatPage() {
               <div className="space-y-2 text-sm text-white/50">
                 <p>+60 11-3105 1677</p>
                 <p>+60 11-3105 1677 (WhatsApp)</p>
-                <p>40460 Shah Alam, Selangor</p>
+                <p>GF LOT 184107, JALAN HAJI TAIB, BATU 7 1/2, 40460 Shah Alam, Selangor</p>
               </div>
             </div>
           </div>

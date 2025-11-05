@@ -800,10 +800,10 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Alamat</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      No 15, Jalan Industri 16/12<br />
-                      Jalan Kampung Batu 7, Jln Kebun Tambahan<br />
+                      GF LOT 184107 (LOT LAMA 3579), JALAN HAJI TAIB,<br />
+                      BATU 7 1/2, Jln Kebun Tambahan, Kampung Jln Kebun,<br />
                       40460 Shah Alam, Selangor<br />
-                      Selangor, Malaysia
+                      Malaysia
                     </p>
                   </div>
                 </div>
@@ -919,7 +919,7 @@ export default function HomePage() {
               <div className="space-y-2 text-sm text-gray-400">
                 <p>+60 11-3105 1677</p>
                 <p>+60 11-3105 1677 (WhatsApp)</p>
-                <p>40460 Shah Alam, Selangor</p>
+                <p>GF LOT 184107, JALAN HAJI TAIB, BATU 7 1/2, 40460 Shah Alam, Selangor</p>
               </div>
             </div>
           </div>

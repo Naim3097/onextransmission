@@ -81,11 +81,11 @@ Terima kasih!`
       icon: MapPin,
       title: 'Alamat',
       details: [
-        'No 15, Jalan Industri 16/12',
-        'Jalan Kampung Batu 7, Jln Kebun Tambahan, 40460 Shah Alam',
+        'GF LOT 184107 (LOT LAMA 3579), JALAN HAJI TAIB',
+        'BATU 7 1/2, Jln Kebun Tambahan, Kampung Jln Kebun, 40460 Shah Alam',
         'Selangor, Malaysia'
       ],
-      description: 'Lokasi bengkel kami di kawasan perindustrian',
+      description: 'Lokasi bengkel kami',
       action: 'https://maps.google.com/?q=2.9790295931497934,101.51856181116906',
       actionText: 'Buka Maps',
       color: 'bg-red-600 hover:bg-red-700'
@@ -487,7 +487,7 @@ Terima kasih!`
                 </div>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-red-400 mt-0.5" />
-                  <span>No 15, Jalan Industri 16/12<br />Shah Alam, Selangor</span>
+                  <span>GF LOT 184107, JALAN HAJI TAIB, BATU 7 1/2<br />40460 Shah Alam, Selangor</span>
                 </div>
               </div>
             </div>
