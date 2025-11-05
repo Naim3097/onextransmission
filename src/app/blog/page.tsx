@@ -13,12 +13,16 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
-import Head from 'next/head'
+import { useState, useEffect } from 'react'
 import Header from '../../components/Header'
 
 export default function BlogPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  // Set document title
+  useEffect(() => {
+    document.title = 'Blog Pakar Gearbox Shah Alam | Tips & Panduan Gearbox Malaysia'
+  }, [])
 
   const whatsappNumber = '+601131051677'
 
@@ -115,52 +119,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <Head>
-        <title>Blog Pakar Gearbox Shah Alam | Tips, Panduan & Penyelesaian Masalah Gearbox Malaysia</title>
-        <meta name="description" content="Artikel lengkap tentang gearbox CVT, automatik & manual. Dapatkan panduan servis, tips penyelenggaraan, kos repair, masalah biasa gearbox untuk semua jenama kereta di Malaysia." />
-        <meta name="keywords" content="blog gearbox malaysia, tips gearbox, panduan servis gearbox, masalah gearbox automatik, kos repair gearbox, CVT perodua myvi, gearbox proton, pakar gearbox shah alam" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://onextransmission.com/blog" />
-        <meta property="og:title" content="Blog Pakar Gearbox Shah Alam | Tips & Panduan Lengkap Gearbox Malaysia" />
-        <meta property="og:description" content="Artikel lengkap tentang gearbox CVT, automatik & manual. Dapatkan panduan servis, tips penyelenggaraan, kos repair, masalah biasa gearbox untuk semua jenama kereta di Malaysia." />
-        <meta property="og:image" content="https://onextransmission.com/images/blog-og-image.jpg" />
-        <meta property="og:locale" content="ms_MY" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://onextransmission.com/blog" />
-        <meta name="twitter:title" content="Blog Pakar Gearbox Shah Alam | Tips & Panduan Lengkap" />
-        <meta name="twitter:description" content="Artikel lengkap tentang gearbox CVT, automatik & manual. Panduan servis, tips penyelenggaraan, kos repair untuk semua jenama kereta di Malaysia." />
-        <meta name="twitter:image" content="https://onextransmission.com/images/blog-og-image.jpg" />
-        
-        {/* Additional SEO */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="One X Transmission Shah Alam" />
-        <link rel="canonical" href="https://onextransmission.com/blog" />
-        
-        {/* Schema.org structured data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": "Blog Pakar Gearbox Shah Alam",
-            "description": "Artikel lengkap tentang gearbox CVT, automatik & manual untuk semua jenama kereta di Malaysia",
-            "url": "https://onextransmission.com/blog",
-            "publisher": {
-              "@type": "Organization",
-              "name": "One X Transmission Shah Alam",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://onextransmission.com/images/logo.png"
-              }
-            },
-            "inLanguage": "ms-MY"
-          })}
-        </script>
-      </Head>
-
       <div className="min-h-screen bg-black text-white">
         <Header currentPage="blog" />
 
