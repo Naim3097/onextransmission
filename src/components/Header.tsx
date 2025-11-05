@@ -44,7 +44,7 @@ export default function Header({ currentPage }: HeaderProps) {
     { name: 'Utama', href: '/', key: 'home' },
     { name: 'Servis Kami', href: '/khidmat', key: 'services' },
     { name: 'Galeri', href: '/galeri', key: 'gallery' },
-  // { name: 'Blog', href: '/blog', key: 'blog' },
+    { name: 'Blog & Tips', href: '/blog', key: 'blog' },
     { name: 'Hubungi Kami', href: '/hubungi', key: 'contact' }
   ]
 
