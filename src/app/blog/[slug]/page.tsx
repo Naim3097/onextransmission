@@ -1948,11 +1948,11 @@ export default function BlogPostPage() {
       </section>
 
       {/* Article Content */}
-      <section className="py-12 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12">
+      <section className="py-12 bg-black overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-8">
               <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1970,52 +1970,47 @@ export default function BlogPostPage() {
                 </div>
 
                 {/* Share Buttons */}
-                <div className="flex items-center justify-between py-4 border-y border-gray-800">
-                  <div className="flex items-center space-x-4">
-                    <span className="text-sm text-gray-400">Kongsikan:</span>
-                    <button 
-                      onClick={shareToFacebook}
-                      className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors"
-                    >
-                      <Facebook className="w-4 h-4" />
-                      <span>Facebook</span>
-                    </button>
-                    <button 
-                      onClick={shareToWhatsApp}
-                      className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm transition-colors"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>WhatsApp</span>
-                    </button>
-                    <button 
-                      onClick={shareToTwitter}
-                      className="flex items-center space-x-2 px-4 py-2 bg-blue-400 hover:bg-blue-500 rounded-lg text-sm transition-colors"
-                    >
-                      <Twitter className="w-4 h-4" />
-                      <span>Twitter</span>
-                    </button>
-                  </div>
+                <div className="flex flex-wrap items-center gap-4 py-4 border-y border-gray-800">
+                  <span className="text-sm text-gray-400">Kongsikan:</span>
+                  <button 
+                    onClick={shareToFacebook}
+                    className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors"
+                  >
+                    <Facebook className="w-4 h-4" />
+                    <span className="hidden sm:inline">Facebook</span>
+                  </button>
+                  <button 
+                    onClick={shareToWhatsApp}
+                    className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span className="hidden sm:inline">WhatsApp</span>
+                  </button>
+                  <button 
+                    onClick={shareToTwitter}
+                    className="flex items-center space-x-2 px-4 py-2 bg-blue-400 hover:bg-blue-500 rounded-lg text-sm transition-colors"
+                  >
+                    <Twitter className="w-4 h-4" />
+                    <span className="hidden sm:inline">Twitter</span>
+                  </button>
                 </div>
 
                 {/* Article Content */}
                 <div 
-                  className="prose prose-invert prose-red max-w-none 
-                    prose-headings:text-white prose-headings:font-bold
-                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-red-400 prose-h2:border-b-2 prose-h2:border-red-900/40 prose-h2:pb-3
-                    prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-red-300
-                    prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-gray-200
-                    prose-p:text-gray-300 prose-p:leading-[1.8] prose-p:mb-6 prose-p:text-base
-                    prose-li:text-gray-300 prose-li:mb-3 prose-li:leading-[1.8]
-                    prose-ul:mb-8 prose-ol:mb-8 prose-ul:pl-6 prose-ol:pl-6 prose-ul:space-y-2 prose-ol:space-y-2
-                    prose-li:marker:text-red-500 prose-li:marker:font-bold
-                    prose-strong:text-white prose-strong:font-semibold prose-strong:bg-red-900/10 prose-strong:px-1
-                    prose-table:w-full prose-table:text-gray-300 prose-table:border-collapse prose-table:my-8
-                    prose-th:bg-gradient-to-r prose-th:from-red-900/40 prose-th:to-red-800/30 prose-th:text-red-300 prose-th:font-bold prose-th:p-4 prose-th:border prose-th:border-gray-700 prose-th:text-left
-                    prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:bg-gray-900/50
-                    prose-tr:hover:bg-gray-800/30
-                    prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic prose-blockquote:text-gray-400 prose-blockquote:bg-red-900/5
-                    prose-code:text-red-400 prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded
-                    first:prose-p:text-lg first:prose-p:text-gray-200 first:prose-p:leading-relaxed"
+                  className="prose prose-invert max-w-none overflow-x-hidden break-words
+                    prose-headings:font-sans prose-headings:font-bold prose-headings:text-white
+                    prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-red-400 prose-h2:pb-2 prose-h2:border-b prose-h2:border-red-900/30
+                    prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-red-300
+                    prose-h4:text-lg md:prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-gray-200
+                    prose-p:font-sans prose-p:text-gray-300 prose-p:text-base prose-p:leading-relaxed prose-p:mb-4
+                    prose-li:font-sans prose-li:text-gray-300 prose-li:text-base prose-li:leading-relaxed
+                    prose-ul:my-4 prose-ul:space-y-2 prose-ol:my-4 prose-ol:space-y-2
+                    prose-li:marker:text-red-500
+                    prose-strong:font-sans prose-strong:text-white prose-strong:font-semibold
+                    prose-table:w-full prose-table:text-sm prose-table:my-6 prose-table:overflow-x-auto prose-table:block md:prose-table:table
+                    prose-thead:bg-red-900/20 prose-th:font-sans prose-th:text-red-400 prose-th:font-bold prose-th:p-3 prose-th:border prose-th:border-gray-700 prose-th:text-left
+                    prose-td:font-sans prose-td:text-gray-300 prose-td:p-3 prose-td:border prose-td:border-gray-700
+                    prose-blockquote:font-sans prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-400"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
@@ -2054,36 +2049,35 @@ export default function BlogPostPage() {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8 space-y-6">
-                {/* Featured/Recent Posts */}
+            <div className="lg:col-span-4">
+              <div className="lg:sticky lg:top-24 space-y-6">
+                {/* Related Posts */}
                 <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold mb-6 text-red-400">Artikel Berkaitan</h3>
+                  <h3 className="text-xl font-bold mb-6 text-red-400 font-sans">Artikel Berkaitan</h3>
                   <div className="space-y-4">
                     {otherPosts.map((otherPost) => (
                       <Link 
                         key={otherPost.id}
                         href={`/blog/${otherPost.slug}`}
-                        className="block group hover:bg-gray-800 rounded-lg p-3 transition-colors duration-300"
+                        className="flex gap-3 group hover:bg-gray-800/50 rounded-lg p-2 transition-colors duration-300"
                       >
-                        <div className="flex space-x-3">
+                        <div className="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                           <img 
                             src={`/${otherPost.image}`}
                             alt={otherPost.title}
-                            className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
-                          <div className="flex-1 min-w-0">
-                            <span className="inline-block bg-red-600/20 text-red-400 text-xs px-2 py-1 rounded-full mb-2 font-medium">
-                              {otherPost.category}
-                            </span>
-                            <h4 className="font-medium text-white group-hover:text-red-400 transition-colors text-sm leading-tight mb-2">
-                              {otherPost.title}
-                            </h4>
-                            <div className="flex items-center text-xs text-gray-400 space-x-2">
-                              <span>{otherPost.date}</span>
-                              <span>•</span>
-                              <span>{otherPost.readTime}</span>
-                            </div>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="inline-block bg-red-600/20 text-red-400 text-xs px-2 py-0.5 rounded-full mb-1.5 font-sans font-medium">
+                            {otherPost.category}
+                          </span>
+                          <h4 className="font-sans font-semibold text-sm text-white group-hover:text-red-400 transition-colors line-clamp-2 leading-tight mb-1.5">
+                            {otherPost.title}
+                          </h4>
+                          <div className="flex items-center text-xs text-gray-500 gap-1.5 font-sans">
+                            <Clock className="w-3 h-3" />
+                            <span>{otherPost.readTime}</span>
                           </div>
                         </div>
                       </Link>
@@ -2091,7 +2085,7 @@ export default function BlogPostPage() {
                   </div>
                   <Link 
                     href="/blog"
-                    className="inline-flex items-center justify-center space-x-2 w-full mt-6 px-4 py-3 bg-red-600/10 hover:bg-red-600/20 border border-red-600/30 rounded-lg text-red-400 hover:text-red-300 text-sm font-medium transition-all duration-300"
+                    className="inline-flex items-center justify-center space-x-2 w-full mt-6 px-4 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-white text-sm font-sans font-medium transition-colors"
                   >
                     <span>Lihat Semua Artikel</span>
                     <ArrowRight className="w-4 h-4" />
@@ -2100,8 +2094,8 @@ export default function BlogPostPage() {
 
                 {/* Contact Widget */}
                 <div className="bg-gradient-to-br from-red-600/20 to-red-900/20 border border-red-600/30 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold mb-4">Perlukan Bantuan?</h3>
-                  <p className="text-gray-300 text-sm mb-4">
+                  <h3 className="text-xl font-bold mb-3 font-sans text-white">Perlukan Bantuan?</h3>
+                  <p className="text-gray-300 text-sm mb-5 font-sans leading-relaxed">
                     Dapatkan diagnosis percuma dan nasihat professional daripada pakar kami.
                   </p>
                   <div className="space-y-3">
@@ -2109,14 +2103,14 @@ export default function BlogPostPage() {
                       href={`https://wa.me/${whatsappNumber.replace(/\+/g, '').replace(/\s/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-3 w-full px-4 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center justify-center space-x-2 w-full px-4 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-sans font-medium transition-colors"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span>WhatsApp</span>
+                      <span>WhatsApp Kami</span>
                     </a>
                     <a
                       href={`tel:${phoneNumber}`}
-                      className="flex items-center space-x-3 w-full px-4 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-sm font-medium transition-colors"
+                      className="flex items-center justify-center space-x-2 w-full px-4 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-sm font-sans font-medium transition-colors"
                     >
                       <Phone className="w-4 h-4" />
                       <span>Call Sekarang</span>
