@@ -1997,22 +1997,152 @@ export default function BlogPostPage() {
 
                 {/* Article Content */}
                 <div 
-                  className="prose prose-invert max-w-none overflow-x-hidden break-words
-                    prose-headings:font-sans prose-headings:font-bold prose-headings:text-white
-                    prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-red-400 prose-h2:pb-2 prose-h2:border-b prose-h2:border-red-900/30
-                    prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-red-300
-                    prose-h4:text-lg md:prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2 prose-h4:text-gray-200
-                    prose-p:font-sans prose-p:text-gray-300 prose-p:text-base prose-p:leading-relaxed prose-p:mb-4
-                    prose-li:font-sans prose-li:text-gray-300 prose-li:text-base prose-li:leading-relaxed
-                    prose-ul:my-4 prose-ul:space-y-2 prose-ol:my-4 prose-ol:space-y-2
-                    prose-li:marker:text-red-500
-                    prose-strong:font-sans prose-strong:text-white prose-strong:font-semibold
-                    prose-table:w-full prose-table:text-sm prose-table:my-6 prose-table:overflow-x-auto prose-table:block md:prose-table:table
-                    prose-thead:bg-red-900/20 prose-th:font-sans prose-th:text-red-400 prose-th:font-bold prose-th:p-3 prose-th:border prose-th:border-gray-700 prose-th:text-left
-                    prose-td:font-sans prose-td:text-gray-300 prose-td:p-3 prose-td:border prose-td:border-gray-700
-                    prose-blockquote:font-sans prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-400"
+                  className="article-content"
+                  style={{
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    color: '#d1d5db',
+                    lineHeight: '1.75',
+                    fontSize: '16px'
+                  }}
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
+
+                <style jsx>{`
+                  .article-content :global(h2) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #f87171;
+                    margin-top: 48px;
+                    margin-bottom: 24px;
+                    padding-bottom: 12px;
+                    border-bottom: 2px solid rgba(127, 29, 29, 0.3);
+                    line-height: 1.3;
+                  }
+
+                  .article-content :global(h3) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #fca5a5;
+                    margin-top: 32px;
+                    margin-bottom: 16px;
+                    line-height: 1.4;
+                  }
+
+                  .article-content :global(h4) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #e5e7eb;
+                    margin-top: 24px;
+                    margin-bottom: 12px;
+                    line-height: 1.4;
+                  }
+
+                  .article-content :global(p) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-size: 16px;
+                    color: #d1d5db;
+                    line-height: 1.75;
+                    margin-bottom: 20px;
+                  }
+
+                  .article-content :global(ul) {
+                    margin: 20px 0;
+                    padding-left: 24px;
+                    list-style-type: disc;
+                  }
+
+                  .article-content :global(ol) {
+                    margin: 20px 0;
+                    padding-left: 24px;
+                    list-style-type: decimal;
+                  }
+
+                  .article-content :global(li) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-size: 16px;
+                    color: #d1d5db;
+                    line-height: 1.75;
+                    margin-bottom: 8px;
+                  }
+
+                  .article-content :global(li)::marker {
+                    color: #ef4444;
+                  }
+
+                  .article-content :global(strong) {
+                    font-family: Inter, system-ui, sans-serif;
+                    font-weight: 600;
+                    color: #ffffff;
+                  }
+
+                  .article-content :global(table) {
+                    width: 100%;
+                    margin: 32px 0;
+                    border-collapse: collapse;
+                    font-size: 14px;
+                    overflow-x: auto;
+                    display: block;
+                  }
+
+                  @media (min-width: 768px) {
+                    .article-content :global(table) {
+                      display: table;
+                    }
+                  }
+
+                  .article-content :global(th) {
+                    font-family: Inter, system-ui, sans-serif;
+                    background: rgba(127, 29, 29, 0.2);
+                    color: #fca5a5;
+                    font-weight: 700;
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #374151;
+                  }
+
+                  .article-content :global(td) {
+                    font-family: Inter, system-ui, sans-serif;
+                    color: #d1d5db;
+                    padding: 12px;
+                    border: 1px solid #374151;
+                  }
+
+                  .article-content :global(tr):hover {
+                    background: rgba(31, 41, 55, 0.3);
+                  }
+
+                  .article-content :global(blockquote) {
+                    font-family: Inter, system-ui, sans-serif;
+                    border-left: 4px solid #ef4444;
+                    padding-left: 20px;
+                    margin: 24px 0;
+                    font-style: italic;
+                    color: #9ca3af;
+                  }
+
+                  @media (max-width: 767px) {
+                    .article-content :global(h2) {
+                      font-size: 24px;
+                      margin-top: 36px;
+                      margin-bottom: 18px;
+                    }
+
+                    .article-content :global(h3) {
+                      font-size: 20px;
+                      margin-top: 24px;
+                      margin-bottom: 12px;
+                    }
+
+                    .article-content :global(h4) {
+                      font-size: 16px;
+                      margin-top: 18px;
+                      margin-bottom: 10px;
+                    }
+                  }
+                `}</style>
 
                 {/* Contact CTA */}
                 <div className="bg-gradient-to-r from-red-900/30 to-red-600/30 border border-red-600/40 rounded-2xl p-8 my-12">

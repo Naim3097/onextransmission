@@ -229,7 +229,8 @@ export default function BlogPage() {
               <motion.button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-sans font-medium transition-all duration-300 ${
+                style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-red-600 text-white shadow-lg shadow-red-600/30'
                     : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800 hover:border-gray-700'
@@ -273,7 +274,7 @@ export default function BlogPage() {
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center bg-red-600 text-white text-xs font-sans font-semibold px-3 py-1.5 rounded-full shadow-lg">
+                    <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="inline-flex items-center bg-red-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
                       {post.category}
                     </span>
                   </div>
@@ -285,7 +286,7 @@ export default function BlogPage() {
                 {/* Post Content */}
                 <div className="p-6 flex flex-col flex-grow">
                   {/* Post Meta */}
-                  <div className="flex items-center flex-wrap gap-3 text-xs text-gray-400 mb-4 font-sans">
+                  <div style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="flex items-center flex-wrap gap-3 text-xs text-gray-400 mb-4">
                     <div className="flex items-center space-x-1.5">
                       <Calendar className="w-3.5 h-3.5" />
                       <span>{post.date}</span>
@@ -298,12 +299,12 @@ export default function BlogPage() {
                   </div>
 
                   {/* Post Title */}
-                  <h3 className="text-xl font-sans font-bold mb-3 text-white group-hover:text-red-400 transition-colors line-clamp-2 leading-tight">
+                  <h3 style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition-colors line-clamp-2 leading-tight">
                     {post.title}
                   </h3>
 
                   {/* Post Excerpt */}
-                  <p className="text-gray-400 text-sm font-sans leading-relaxed mb-6 line-clamp-3 flex-grow">
+                  <p style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                     {post.excerpt}
                   </p>
 
@@ -313,12 +314,13 @@ export default function BlogPage() {
                       <div className="w-8 h-8 rounded-full bg-red-600/10 flex items-center justify-center">
                         <User className="w-4 h-4 text-red-500" />
                       </div>
-                      <span className="text-xs text-gray-400 font-sans font-medium">{post.author}</span>
+                      <span style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="text-xs text-gray-400 font-medium">{post.author}</span>
                     </div>
                     
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center space-x-1 text-red-500 hover:text-red-400 text-sm font-sans font-semibold group/link"
+                      style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+                      className="inline-flex items-center space-x-1 text-red-500 hover:text-red-400 text-sm font-semibold group/link"
                     >
                       <span>Baca</span>
                       <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
