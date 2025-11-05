@@ -18,7 +18,8 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Header from '../../../components/Header'
 import { useParams } from 'next/navigation'
 
@@ -26,295 +27,1700 @@ import { useParams } from 'next/navigation'
 const blogPosts = [
   {
     id: 1,
-    slug: 'cara-mengenal-pasti-masalah-cvt-awal',
-    title: 'Cara Mengenal Pasti Masalah CVT Awal',
-    excerpt: 'Belajar tanda-tanda awal kerosakan CVT untuk mengelakkan kos pembaikan yang mahal.',
+    slug: '5-langkah-mudah-jaga-gearbox-cvt',
+    title: '5 Langkah Mudah Menjaga Gearbox CVT Anda',
+    excerpt: 'Panduan lengkap untuk pemilik kereta dengan gearbox CVT. Ikuti 5 langkah mudah ini untuk memastikan gearbox anda tahan lama dan mengelakkan kos pembaikan yang tinggi.',
     content: `
-      <h2>Tanda-Tanda Awal Masalah CVT</h2>
-      <p>CVT (Continuously Variable Transmission) adalah sistem transmisi yang semakin popular dalam kenderaan moden. Namun, seperti mana-mana sistem mekanikal, CVT juga boleh mengalami masalah. Mengenal pasti tanda-tanda awal adalah kunci untuk mengelakkan kos pembaikan yang mahal.</p>
+      <h2>Pengenalan Gearbox CVT</h2>
+      <p>Gearbox CVT (Continuously Variable Transmission) semakin popular dalam kenderaan moden kerana keupayaannya memberikan pemanduan yang smooth dan jimat minyak. Namun, untuk memastikan ia beroperasi dengan baik dan tahan lama, penjagaan yang betul adalah sangat penting.</p>
+
+      <h2>Langkah 1: Tukar Minyak CVT Mengikut Jadual</h2>
+      <p>Minyak CVT adalah nadi kepada sistem transmisi anda. Tidak seperti gearbox manual, CVT memerlukan minyak khusus yang direka untuk mengendalikan tekanan dan haba yang tinggi.</p>
       
-      <h3>1. Bunyi Bising Yang Luar Biasa</h3>
-      <p>CVT yang sihat sepatutnya beroperasi dengan senyap. Jika anda mendengar bunyi bising seperti:</p>
+      <h3>Jadual Penukaran Yang Disarankan:</h3>
       <ul>
-        <li>Bunyi menderu ketika memecut</li>
-        <li>Bunyi berderit atau berkikis</li>
-        <li>Bunyi ketukan dari bahagian transmisi</li>
-      </ul>
-      <p>Ini adalah petanda awal bahawa CVT anda memerlukan perhatian segera.</p>
-
-      <h3>2. Getaran Yang Tidak Normal</h3>
-      <p>CVT yang bermasalah akan menyebabkan getaran yang boleh dirasai melalui:</p>
-      <ul>
-        <li>Stereng yang bergetar ketika memandu</li>
-        <li>Tempat duduk yang bergegar</li>
-        <li>Gear stick yang tidak stabil</li>
+        <li><strong>Setiap 40,000km - 60,000km:</strong> Untuk kebanyakan jenama Jepun (Honda, Toyota, Nissan)</li>
+        <li><strong>Setiap 30,000km - 40,000km:</strong> Untuk pemanduan dalam bandar atau keadaan keras</li>
+        <li><strong>Setiap 2-3 tahun:</strong> Walaupun mileage rendah, minyak perlu ditukar</li>
       </ul>
 
-      <h3>3. Masalah Pecutan</h3>
-      <p>Jika kenderaan anda mengalami:</p>
-      <ul>
-        <li>Pecutan yang lemah walaupun enjin berputar laju</li>
-        <li>Kenderaan 'tersentak' ketika memecut</li>
-        <li>RPM tinggi tapi kelajuan tidak meningkat</li>
-      </ul>
-      <p>Ini menunjukkan masalah dengan sistem CVT yang memerlukan diagnosis professional.</p>
+      <p><strong>Tip Penting:</strong> Sentiasa gunakan minyak CVT yang disyorkan oleh pengeluar kereta anda. Jangan gunakan minyak ATF biasa kerana ia boleh merosakkan sistem CVT.</p>
 
-      <h3>4. Bau Hangus</h3>
-      <p>Bau hangus yang datang dari bahagian transmisi adalah tanda bahaya yang tidak boleh diabaikan. Ini mungkin disebabkan oleh:</p>
+      <h2>Langkah 2: Panaskan Enjin Sebelum Memandu</h2>
+      <p>Ramai pemandu terlepas pandang kepentingan memanaskan enjin, terutamanya pada waktu pagi. Ini sangat penting untuk kesihatan CVT anda.</p>
+      
+      <h3>Cara Yang Betul:</h3>
       <ul>
-        <li>Minyak CVT yang terlalu panas</li>
-        <li>Geseran berlebihan dalam sistem</li>
-        <li>Komponen yang haus</li>
+        <li>Hidupkan enjin dan biarkan idle selama 30-60 saat</li>
+        <li>Jangan tekan minyak dengan kuat serta-merta</li>
+        <li>Pandu perlahan-lahan untuk 2-3km pertama</li>
+        <li>Biarkan minyak CVT mencapai suhu operasi yang optimum</li>
       </ul>
 
-      <h2>Langkah Pencegahan</h2>
-      <p>Untuk mengelakkan masalah CVT yang serius:</p>
+      <p>Minyak CVT yang sejuk adalah lebih likat dan tidak dapat melincir dengan baik. Ini boleh menyebabkan haus pramatang pada komponen dalaman.</p>
+
+      <h2>Langkah 3: Elakkan Pemanduan Agresif</h2>
+      <p>CVT direka untuk kecekapan dan keselesaan, bukan prestasi maksimum. Pemanduan agresif boleh memendekkan jangka hayat CVT anda dengan ketara.</p>
+      
+      <h3>Perkara Yang Perlu Dielakkan:</h3>
       <ul>
-        <li>Tukar minyak CVT mengikut jadual penyelenggaraan</li>
-        <li>Lakukan pemeriksaan berkala di bengkel yang dipercayai</li>
-        <li>Elakkan pemanduan yang agresif</li>
-        <li>Jangan abaikan tanda-tanda awal masalah</li>
+        <li><strong>Kick-down berlebihan:</strong> Menekan pedal minyak sepenuhnya terlalu kerap</li>
+        <li><strong>Akselerasi mendadak:</strong> Terutamanya dari keadaan berhenti</li>
+        <li><strong>Mengayuh minyak:</strong> On-off pedal minyak dengan kerap</li>
+        <li><strong>Overtaking agresif:</strong> Memerlukan CVT bekerja pada tekanan maksimum</li>
       </ul>
+
+      <p>Pemanduan yang smooth dan predictable adalah kunci kepada CVT yang tahan lama. Cuba anticipate traffic flow dan maintain kelajuan yang konsisten.</p>
+
+      <h2>Langkah 4: Jangan Overload Kenderaan</h2>
+      <p>CVT mempunyai had berat yang boleh dikendalikan dengan selamat. Membebankan kenderaan melebihi kapasiti boleh menyebabkan kerosakan serius.</p>
+      
+      <h3>Kesan Overloading:</h3>
+      <ul>
+        <li>Tekanan berlebihan pada belt atau chain CVT</li>
+        <li>Minyak CVT menjadi terlalu panas</li>
+        <li>Komponen haus lebih cepat</li>
+        <li>Risiko slip dan kerosakan permanent</li>
+      </ul>
+
+      <h3>Panduan Beban:</h3>
+      <ul>
+        <li>Rujuk manual pemilik untuk kapasiti maksimum</li>
+        <li>Termasuk berat penumpang dalam kiraan</li>
+        <li>Elakkan towing yang berat jika kereta tidak direka untuk itu</li>
+        <li>Kurangkan beban jika memandu jauh atau mendaki bukit</li>
+      </ul>
+
+      <h2>Langkah 5: Servis Berkala di Bengkel Yang Dipercayai</h2>
+      <p>Walaupun anda menjaga CVT dengan baik, servis professional berkala adalah sangat penting untuk mengesan masalah awal.</p>
+      
+      <h3>Apa Yang Dilakukan Semasa Servis CVT:</h3>
+      <ul>
+        <li><strong>Pemeriksaan Visual:</strong> Check untuk kebocoran atau kerosakan</li>
+        <li><strong>Scan Computer:</strong> Baca error codes dan data sensor</li>
+        <li><strong>Test Drive:</strong> Detect masalah yang mungkin tidak disedari pemilik</li>
+        <li><strong>Tukar Minyak:</strong> Dengan minyak spec yang betul</li>
+        <li><strong>Ganti Filter:</strong> Untuk mengekalkan kebersihan sistem</li>
+        <li><strong>Calibration:</strong> Ensure CVT beroperasi pada parameter yang betul</li>
+      </ul>
+
+      <h3>Kenapa Pilih Bengkel Specialist?</h3>
+      <ul>
+        <li>Pengalaman khusus dengan CVT</li>
+        <li>Peralatan diagnostic yang lengkap</li>
+        <li>Gunakan spare parts berkualiti</li>
+        <li>Warranty untuk kerja yang dilakukan</li>
+        <li>Nasihat professional untuk penjagaan jangka panjang</li>
+      </ul>
+
+      <h2>Tanda-Tanda CVT Memerlukan Perhatian</h2>
+      <p>Walaupun anda mengikuti semua langkah di atas, masih penting untuk peka terhadap tanda-tanda yang menunjukkan CVT mungkin bermasalah:</p>
+      
+      <ul>
+        <li><strong>Bunyi Bising:</strong> Bunyi menderu atau grinding ketika memandu</li>
+        <li><strong>Getaran:</strong> Vibrasi yang tidak normal, terutama pada kelajuan tinggi</li>
+        <li><strong>Slip:</strong> Enjin rev tinggi tapi kereta tidak memecut</li>
+        <li><strong>Jerking:</strong> Kereta tersentak ketika menukar kelajuan</li>
+        <li><strong>Warning Light:</strong> Lampu transmisi menyala di dashboard</li>
+        <li><strong>Bau Hangus:</strong> Bau terbakar dari bahagian gearbox</li>
+      </ul>
+
+      <p>Jika anda alami mana-mana simptom ini, <strong>jangan tunggu</strong>. Bawa kereta anda ke bengkel pakar CVT untuk diagnosis segera.</p>
+
+      <h2>Kos Penjagaan vs Kos Pembaikan</h2>
+      <p>Ramai pemilik kereta terkejut dengan kos pembaikan CVT yang boleh mencecah <strong>RM 4,000 - RM 8,000</strong> untuk overhaul penuh. Bandingkan ini dengan kos penjagaan berkala:</p>
+      
+      <table>
+        <tr>
+          <th>Servis</th>
+          <th>Kos</th>
+          <th>Kekerapan</th>
+        </tr>
+        <tr>
+          <td>Tukar Minyak CVT</td>
+          <td>RM 300 - RM 500</td>
+          <td>40,000 - 60,000km</td>
+        </tr>
+        <tr>
+          <td>Tukar Filter CVT</td>
+          <td>RM 80 - RM 150</td>
+          <td>Setiap kali tukar minyak</td>
+        </tr>
+        <tr>
+          <td>Inspection & Diagnostic</td>
+          <td>RM 50 - RM 100</td>
+          <td>Setiap tahun</td>
+        </tr>
+        <tr>
+          <td><strong>TOTAL (setahun)</strong></td>
+          <td><strong>RM 430 - RM 750</strong></td>
+          <td>Lebih murah dari 1 overhaul!</td>
+        </tr>
+      </table>
+
+      <p>Seperti yang anda lihat, melabur dalam penjagaan berkala adalah jauh lebih murah berbanding membaiki CVT yang rosak.</p>
 
       <h2>Kesimpulan</h2>
-      <p>Mengenal pasti masalah CVT pada peringkat awal dapat menjimatkan beribu-ribu ringgit dalam kos pembaikan. Jika anda mengalami mana-mana tanda yang dinyatakan, jangan tangguh untuk mendapatkan diagnosis professional.</p>
+      <p>Menjaga gearbox CVT anda tidak susah - ia hanya memerlukan konsistensi dan perhatian kepada detail. Dengan mengikuti 5 langkah mudah ini, anda boleh:</p>
+      
+      <ul>
+        <li>✅ Memanjangkan jangka hayat CVT anda</li>
+        <li>✅ Mengelakkan kos pembaikan yang mahal</li>
+        <li>✅ Menikmati pemanduan yang smooth dan selesa</li>
+        <li>✅ Mengekalkan nilai jualan semula kereta anda</li>
+      </ul>
+
+      <p><strong>Ingat:</strong> CVT yang dijaga dengan baik boleh bertahan lebih dari 200,000km tanpa masalah major. Tetapi CVT yang diabaikan mungkin mula bermasalah seawal 60,000km.</p>
+
+      <p>Jika anda ada sebarang soalan tentang penjagaan CVT atau perlukan servis, jangan teragak-agak untuk hubungi kami di <strong>One X Transmission Shah Alam</strong>. Kami sedia membantu dengan nasihat percuma dan diagnosis professional!</p>
     `,
     image: 'service-diagnosis.jpg',
-    category: 'Tips & Panduan',
-    date: '15 Ogos 2024',
-    readTime: '5 minit bacaan',
+    category: 'Panduan & Tips',
+    date: '1 November 2024',
+    readTime: '6 minit bacaan',
     author: 'Pakar Gearbox Team',
-    tags: ['CVT', 'Diagnosis', 'Pencegahan', 'Tips']
+    tags: ['CVT', 'Penjagaan', 'Tips', 'Penyelenggaraan']
   },
   {
     id: 2,
-    slug: 'pentingnya-servis-cvt-berkala',
-    title: 'Pentingnya Servis CVT Berkala',
-    excerpt: 'Kenapa servis CVT secara berkala penting untuk jangka hayat gearbox anda.',
+    slug: '7-tanda-gearbox-automatik-bermasalah',
+    title: '7 Tanda Gearbox Automatik Anda Bermasalah',
+    excerpt: 'Kenali tanda-tanda awal masalah gearbox automatik sebelum terlambat. Jimat ribuan ringgit dengan diagnosis awal dan tindakan pantas dari pakar kami.',
     content: `
-      <h2>Mengapa Servis CVT Berkala Penting?</h2>
-      <p>CVT (Continuously Variable Transmission) adalah sistem yang kompleks yang memerlukan penyelenggaraan yang betul untuk memastikan prestasi optimum dan jangka hayat yang panjang.</p>
-      
-      <h3>1. Menjaga Kualiti Minyak CVT</h3>
-      <p>Minyak CVT berfungsi sebagai:</p>
+      <h2>Kenapa Penting Mengenali Tanda Awal?</h2>
+      <p>Gearbox automatik adalah salah satu komponen paling mahal dalam kereta anda. Kos pembaikan atau overhaul boleh mencecah <strong>RM 5,000 - RM 10,000</strong> atau lebih, bergantung pada jenama dan model kereta. Oleh itu, mengenali tanda-tanda awal masalah adalah sangat penting.</p>
+
+      <p>Masalah gearbox yang diabaikan bukan sahaja mahal untuk dibaiki, tetapi juga berbahaya. Gearbox yang rosak boleh menyebabkan kereta tiba-tiba stop atau tidak dapat berger ak, yang sangat berisiko terutama di lebuh raya.</p>
+
+      <h2>7 Tanda Yang Tidak Boleh Diabaikan</h2>
+
+      <h3>1. Kereta Tersentak atau Jerking</h3>
+      <p>Ini adalah salah satu tanda paling biasa yang masalah gearbox sudah bermula. Anda akan rasa kereta "tersentak" atau "terlompat" ketika:</p>
       <ul>
-        <li>Pelincir untuk mengurangkan geseran</li>
-        <li>Pendingin untuk mengawal suhu</li>
-        <li>Medium hidraulik untuk operasi sistem</li>
-        <li>Pembersih untuk membuang kotoran</li>
+        <li>Menukar gear (terutama dari P ke D atau R)</li>
+        <li>Memecualkan pada kelajuan rendah</li>
+        <li>Menukar kelajuan secara automatik</li>
+        <li>Berhenti di traffic light</li>
       </ul>
 
-      <h3>2. Jadual Servis Yang Disarankan</h3>
-      <p>Untuk CVT, servis berkala perlu dilakukan:</p>
+      <p><strong>Punca Biasa:</strong></p>
       <ul>
-        <li>Setiap 40,000km - 60,000km (bergantung kepada jenama)</li>
-        <li>Setiap 2-3 tahun untuk pemanduan biasa</li>
-        <li>Lebih kerap untuk pemanduan dalam keadaan keras</li>
+        <li>Minyak ATF kotor atau rendah</li>
+        <li>Solenoid tidak berfungsi dengan baik</li>
+        <li>Clutch atau band yang haus</li>
+        <li>Valve body bermasalah</li>
       </ul>
 
-      <h3>3. Apa Yang Dilakukan Semasa Servis CVT?</h3>
+      <h3>2. Bunyi Bising Yang Luar Biasa</h3>
+      <p>Gearbox automatik yang sihat sepatutnya beroperasi dengan senyap. Jika anda dengar bunyi pelik, ini petanda ada masalah:</p>
+
+      <h4>Jenis Bunyi & Maksudnya:</h4>
       <ul>
-        <li>Tukar minyak CVT dengan jenis yang betul</li>
-        <li>Ganti filter CVT</li>
-        <li>Bersih valve body dan solenoid</li>
-        <li>Periksa tahap minyak dan kualiti</li>
-        <li>Test sistem untuk memastikan operasi normal</li>
+        <li><strong>Bunyi Mendering/Whining:</strong> Pump minyak bermasalah atau minyak rendah</li>
+        <li><strong>Bunyi Grinding/Berkikis:</strong> Gear atau bearing haus</li>
+        <li><strong>Bunyi Knock/Ketukan:</strong> Komponen dalaman longgar atau rosak</li>
+        <li><strong>Bunyi Clunking:</strong> Mounting gearbox longgar atau U-joint rosak</li>
       </ul>
 
-      <h2>Risiko Jika Tidak Servis Berkala</h2>
-      <p>Mengabaikan servis CVT berkala boleh menyebabkan:</p>
+      <p><strong>Tindakan:</strong> Jangan tunggu bunyi bertambah kuat. Dapatkan diagnosis segera untuk mengenal pasti punca sebenar.</p>
+
+      <h3>3. Gearbox Slip</h3>
+      <p>Ini adalah masalah yang sangat serius. "Slip" bermaksud gearbox tidak dapat maintain gear dengan betul. Tanda-tandanya:</p>
       <ul>
-        <li>Minyak CVT menjadi kotor dan kehilangan sifat pelincir</li>
-        <li>Overheat yang boleh memusnahkan komponen</li>
-        <li>Kerosakan belt atau chain CVT</li>
-        <li>Masalah dengan valve body dan solenoid</li>
-        <li>Kos pembaikan yang sangat mahal</li>
+        <li>Enjin RPM naik tinggi tapi kereta tidak memecut sewajarnya</li>
+        <li>Kereta rasa "hilang kuasa" ketika memecut</li>
+        <li>Gear tiba-tiba "turun" walaupun kaki tidak tekan minyak</li>
+        <li>Kereta lambat bertindak balas bila tekan pedal minyak</li>
       </ul>
 
-      <h2>Tips Penjagaan CVT</h2>
+      <p><strong>Bahaya:</strong> Gearbox yang slip boleh menyebabkan kemalangan, terutama ketika overtake atau naik bukit. Ini adalah emergency yang memerlukan perhatian segera!</p>
+
+      <h3>4. Kelewatan Bertindak Balas (Delayed Engagement)</h3>
+      <p>Apabila anda tukar gear dari P ke D atau R, kereta sepatutnya respond serta-merta (dalam 1-2 saat). Jika ada kelewatan yang ketara (3-5 saat atau lebih), ini tanda masalah.</p>
+
+      <p><strong>Gejala:</strong></p>
       <ul>
-        <li>Panaskan enjin sebelum memandu, terutama di pagi hari</li>
-        <li>Elakkan akselerasi mendadak</li>
-        <li>Jangan tarik beban yang melebihi kapasiti kenderaan</li>
-        <li>Periksa tahap minyak CVT secara berkala</li>
+        <li>Kena tunggu beberapa saat selepas shift gear baru kereta bergerak</li>
+        <li>Enjin rev dulu sebelum kereta mula bergerak</li>
+        <li>Lebih teruk pada waktu pagi (enjin sejuk)</li>
       </ul>
+
+      <p><strong>Punca:</strong> Biasanya disebabkan oleh minyak ATF yang sudah tidak bagus, clutch pack haus, atau masalah pada valve body.</p>
+
+      <h3>5. Minyak Gearbox Bocor</h3>
+      <p>Ini mudah dilihat jika anda perasan. Periksa di bawah kereta anda (tempat letak kereta) untuk tanda-tanda cecair:</p>
+
+      <h4>Cara Mengenal Pasti:</h4>
+      <ul>
+        <li><strong>Warna:</strong> Minyak ATF biasanya merah terang atau merah jambu</li>
+        <li><strong>Lokasi:</strong> Biasanya di bahagian tengah-depan kereta</li>
+        <li><strong>Bau:</strong> Minyak ATF ada bau yang khas, tidak sama dengan minyak enjin</li>
+      </ul>
+
+      <p><strong>Kenapa Berbahaya:</strong></p>
+      <ul>
+        <li>Tahap minyak rendah boleh merosakkan gearbox</li>
+        <li>Gearbox akan overheat tanpa minyak yang cukup</li>
+        <li>Boleh menyebabkan kerosakan total jika diabaikan</li>
+      </ul>
+
+      <h3>6. Bau Hangus atau Terbakar</h3>
+      <p>Jika anda hidu bau hangus atau terbakar ketika memandu, ini adalah tanda bahaya!</p>
+
+      <p><strong>Punca Bau Hangus:</strong></p>
+      <ul>
+        <li>Minyak ATF terlalu panas (overheating)</li>
+        <li>Minyak sudah rosak dan tidak mampu lincirkan dengan baik</li>
+        <li>Clutch terbakar akibat slip yang teruk</li>
+        <li>Geseran berlebihan antara komponen dalaman</li>
+      </ul>
+
+      <p><strong>Tindakan Segera:</strong> Berhenti memandu dan dapatkan towing service. Teruskan memandu boleh menyebabkan kerosakan permanent yang sangat mahal untuk dibaiki.</p>
+
+      <h3>7. Lampu Warning Gearbox Menyala</h3>
+      <p>Kereta moden dilengkapi dengan sensor yang akan detect masalah gearbox dan menyalakan lampu warning di dashboard.</p>
+
+      <p><strong>Jenis Lampu Warning:</strong></p>
+      <ul>
+        <li><strong>Check Engine Light:</strong> Boleh berkaitan dengan gearbox</li>
+        <li><strong>AT Light (Automatic Transmission):</strong> Khusus untuk masalah gearbox</li>
+        <li><strong>OD OFF Light:</strong> Masalah dengan overdrive</li>
+      </ul>
+
+      <p><strong>Apa Yang Perlu Dibuat:</strong> Jangan abaikan lampu warning! Dapatkan computer diagnostic scan untuk baca error code. Ini akan beritahu exact problem yang berlaku.</p>
+
+      <h2>Masalah Tambahan Yang Perlu Diperhatikan</h2>
+
+      <h3>Gear Tidak Boleh Shift atau Stuck</h3>
+      <ul>
+        <li>Gear lever stuck dan tidak boleh bergerak</li>
+        <li>Gear stuck dalam satu position sahaja</li>
+        <li>Perlu force untuk tukar gear</li>
+      </ul>
+
+      <h3>Getaran Berlebihan</h3>
+      <ul>
+        <li>Kereta bergetar ketika gear engage</li>
+        <li>Vibrasi yang boleh dirasa melalui steering atau seat</li>
+        <li>Lebih teruk pada kelajuan tertentu</li>
+      </ul>
+
+      <h2>Apa Yang Perlu Anda Buat Sekarang?</h2>
+
+      <h3>Langkah 1: Diagnostic Segera</h3>
+      <p>Jika anda alami mana-mana tanda di atas, jangan tunggu. Bawa kereta anda ke bengkel pakar gearbox untuk diagnostic. Di One X Transmission, kami tawarkan:</p>
+      <ul>
+        <li>✅ Computer diagnostic scan</li>
+        <li>✅ Test drive dengan technician berpengalaman</li>
+        <li>✅ Visual inspection menyeluruh</li>
+        <li>✅ Quotation percuma</li>
+      </ul>
+
+      <h3>Langkah 2: Servis atau Repair</h3>
+      <p>Bergantung pada masalah, penyelesaian boleh jadi:</p>
+      <ul>
+        <li><strong>Minor:</strong> Tukar minyak ATF, ganti filter (RM 300-500)</li>
+        <li><strong>Medium:</strong> Tukar solenoid, gasket (RM 800-1,500)</li>
+        <li><strong>Major:</strong> Overhaul atau rebuild (RM 3,500-8,000)</li>
+      </ul>
+
+      <h3>Langkah 3: Pencegahan</h3>
+      <p>Untuk elakkan masalah berulang:</p>
+      <ul>
+        <li>Tukar minyak ATF mengikut jadual (setiap 40,000-60,000km)</li>
+        <li>Servis berkala di bengkel yang dipercayai</li>
+        <li>Elakkan pemanduan agresif</li>
+        <li>Jangan overload kenderaan</li>
+        <li>Panaskan enjin sebelum memandu</li>
+      </ul>
+
+      <h2>Kos Pembaikan: Early vs Late</h2>
+      <p>Perbezaan kos jika anda ambil tindakan awal berbanding lambat:</p>
+
+      <table>
+        <tr>
+          <th>Masalah</th>
+          <th>Tindakan Awal</th>
+          <th>Tindakan Lambat</th>
+        </tr>
+        <tr>
+          <td>Minyak Kotor</td>
+          <td>RM 300-500 (tukar minyak)</td>
+          <td>RM 4,000-8,000 (overhaul)</td>
+        </tr>
+        <tr>
+          <td>Solenoid Rosak</td>
+          <td>RM 800-1,200 (tukar)</td>
+          <td>RM 5,000-10,000 (valve body + overhaul)</td>
+        </tr>
+        <tr>
+          <td>Minor Slip</td>
+          <td>RM 1,500-2,500 (repair)</td>
+          <td>RM 6,000-12,000 (rebuild)</td>
+        </tr>
+      </table>
 
       <h2>Kesimpulan</h2>
-      <p>Servis CVT berkala adalah pelaburan yang bijak untuk memastikan kenderaan anda beroperasi dengan lancar dan mengelakkan kos pembaikan yang besar di masa hadapan.</p>
+      <p>Gearbox automatik adalah komponen yang sangat penting dan mahal. Dengan mengenali 7 tanda masalah ini, anda boleh:</p>
+      <ul>
+        <li>✅ Menjimatkan ribuan ringgit dengan repair awal</li>
+        <li>✅ Elakkan kerosakan yang lebih teruk</li>
+        <li>✅ Memastikan keselamatan di jalan raya</li>
+        <li>✅ Memanjangkan jangka hayat gearbox anda</li>
+      </ul>
+
+      <p><strong>Jangan tunggu sampai terlambat!</strong> Jika kereta anda tunjukkan mana-mana simptom yang dinyatakan, hubungi kami segera untuk diagnosis percuma. Kami di One X Transmission Shah Alam sedia membantu dengan pengalaman lebih 15 tahun dalam pembaikan gearbox.</p>
     `,
-    image: 'service-overhaul.jpg',
-    category: 'Penyelenggaraan',
-    date: '12 Ogos 2024',
-    readTime: '4 minit bacaan',
+    image: 'service-automatic.jpg',
+    category: 'Masalah Gearbox',
+    date: '28 Oktober 2024',
+    readTime: '7 minit bacaan',
     author: 'Pakar Gearbox Team',
-    tags: ['CVT', 'Servis', 'Penyelenggaraan', 'Minyak']
+    tags: ['Gearbox Automatik', 'Masalah', 'Diagnosis', 'Tanda-tanda']
   },
   {
     id: 3,
-    slug: 'pilihan-minyak-atf-yang-sesuai',
-    title: 'Pilihan Minyak ATF Yang Sesuai',
-    excerpt: 'Panduan memilih minyak ATF yang betul untuk gearbox automatik anda.',
+    slug: 'jadual-servis-gearbox-masa-sesuai',
+    title: 'Jadual Servis Gearbox: Bila Masa Yang Sesuai?',
+    excerpt: 'Ketahui jadual servis yang betul untuk gearbox anda. Penyelenggaraan berkala dapat mengelakkan masalah besar dan memanjangkan jangka hayat gearbox.',
     content: `
-      <h2>Pentingnya Memilih Minyak ATF Yang Betul</h2>
-      <p>Minyak ATF (Automatic Transmission Fluid) adalah nadi kepada gearbox automatik anda. Memilih jenis yang salah boleh menyebabkan kerosakan serius dan kos pembaikan yang tinggi.</p>
-      
-      <h3>1. Jenis-Jenis Minyak ATF</h3>
-      <p>Terdapat beberapa jenis minyak ATF yang berbeza:</p>
+      <h2>Kenapa Jadual Servis Penting?</h2>
+      <p>Ramai pemilik kereta tidak tahu bahawa gearbox automatik dan CVT memerlukan servis berkala seperti mana enjin kereta. Kegagalan untuk menservis gearbox mengikut jadual boleh menyebabkan:</p>
       <ul>
-        <li><strong>ATF Type A:</strong> Untuk gearbox lama (sebelum 1970s)</li>
-        <li><strong>Dexron VI:</strong> Standard GM untuk kebanyakan gearbox moden</li>
-        <li><strong>Mercon V:</strong> Spesifikasi Ford</li>
-        <li><strong>CVT Fluid:</strong> Khusus untuk transmisi CVT</li>
-        <li><strong>Minyak jenama khas:</strong> Toyota WS, Honda ATF-Z1, dsb</li>
+        <li>Kerosakan pramatang pada komponen dalaman</li>
+        <li>Kos pembaikan yang sangat mahal (RM 5,000 - RM 12,000)</li>
+        <li>Prestasi kereta yang menurun</li>
+        <li>Nilai jualan semula kereta yang rendah</li>
       </ul>
 
-      <h3>2. Cara Menentukan Jenis Yang Sesuai</h3>
+      <h2>Jadual Servis Mengikut Jenis Gearbox</h2>
+
+      <h3>1. Gearbox CVT (Continuously Variable Transmission)</h3>
+      <p>CVT adalah yang paling sensitif dan memerlukan perhatian berkala yang ketat.</p>
+
+      <h4>Jadual Asas CVT:</h4>
       <ul>
-        <li>Rujuk manual pemilik kenderaan</li>
-        <li>Periksa label pada cap minyak transmisi</li>
-        <li>Tanya pakar gearbox yang berpengalaman</li>
-        <li>Jangan guna minyak generik tanpa spesifikasi yang jelas</li>
+        <li><strong>Setiap 40,000km - 60,000km:</strong> Tukar minyak CVT dan filter</li>
+        <li><strong>Setiap 80,000km - 100,000km:</strong> Servis menyeluruh termasuk inspection dalaman</li>
+        <li><strong>Setiap 2 tahun:</strong> Tukar minyak walaupun mileage belum sampai</li>
       </ul>
 
-      <h3>3. Tanda-Tanda Minyak ATF Perlu Ditukar</h3>
-      <p>Periksa minyak ATF anda untuk tanda-tanda berikut:</p>
+      <h4>Jenama Khusus CVT:</h4>
+      <table>
+        <tr>
+          <th>Jenama</th>
+          <th>Model Popular</th>
+          <th>Servis CVT</th>
+        </tr>
+        <tr>
+          <td>Honda</td>
+          <td>City, Jazz, HR-V</td>
+          <td>Setiap 40,000km</td>
+        </tr>
+        <tr>
+          <td>Nissan</td>
+          <td>Almera, X-Trail, Serena</td>
+          <td>Setiap 60,000km</td>
+        </tr>
+        <tr>
+          <td>Toyota</td>
+          <td>Vios, Corolla Altis</td>
+          <td>Setiap 40,000km</td>
+        </tr>
+        <tr>
+          <td>Perodua</td>
+          <td>Myvi, Axia, Bezza</td>
+          <td>Setiap 40,000km</td>
+        </tr>
+        <tr>
+          <td>Proton</td>
+          <td>Saga, Persona (CVT)</td>
+          <td>Setiap 50,000km</td>
+        </tr>
+      </table>
+
+      <h3>2. Gearbox Automatik Konvensional</h3>
+      <p>Lebih robust daripada CVT, tapi tetap perlukan servis berkala.</p>
+
+      <h4>Jadual Asas Automatik:</h4>
       <ul>
-        <li><strong>Warna:</strong> Merah terang = baik, coklat/hitam = perlu tukar</li>
-        <li><strong>Bau:</strong> Bau hangus menandakan minyak rosak</li>
-        <li><strong>Tekstur:</strong> Minyak yang berpartikel atau berbuih</li>
-        <li><strong>Tahap:</strong> Tahap minyak yang rendah</li>
+        <li><strong>Setiap 60,000km - 80,000km:</strong> Tukar minyak ATF dan filter</li>
+        <li><strong>Setiap 100,000km - 120,000km:</strong> Overhaul atau rebuild (jika perlu)</li>
+        <li><strong>Setiap 3 tahun:</strong> Check dan top-up minyak</li>
       </ul>
 
-      <h3>4. Jenama Minyak ATF Yang Disarankan</h3>
+      <h3>3. Dual Clutch Transmission (DCT)</h3>
+      <p>Teknologi yang lebih baru dan memerlukan perhatian khusus.</p>
+
+      <h4>Jadual DCT:</h4>
       <ul>
-        <li><strong>Castrol Transmax:</strong> Sesuai untuk kebanyakan kenderaan</li>
-        <li><strong>Mobil 1 ATF:</strong> Prestasi tinggi dan tahan lama</li>
-        <li><strong>Valvoline ATF:</strong> Harga berpatutan dengan kualiti baik</li>
-        <li><strong>Original Equipment:</strong> Minyak jenama asal kenderaan</li>
+        <li><strong>Setiap 50,000km - 70,000km:</strong> Tukar minyak DCT</li>
+        <li><strong>Setiap 100,000km:</strong> Tukar clutch pack</li>
+        <li><strong>Annually:</strong> Software update dan calibration</li>
       </ul>
 
-      <h2>Proses Penggantian Minyak ATF</h2>
-      <p>Penggantian minyak ATF perlu dilakukan dengan betul:</p>
-      <ol>
-        <li>Panaskan enjin hingga suhu operasi normal</li>
-        <li>Kosongkan minyak lama sepenuhnya</li>
-        <li>Ganti filter ATF jika perlu</li>
-        <li>Isi minyak baharu mengikut spesifikasi</li>
-        <li>Test drive dan periksa tahap minyak semula</li>
-      </ol>
+      <h2>Apa Yang Dilakukan Semasa Servis?</h2>
 
-      <h2>Kesilapan Yang Perlu Dielakkan</h2>
+      <h3>Servis Minor (RM 300 - RM 600)</h3>
+      <p>Biasanya dilakukan setiap 40,000-60,000km:</p>
       <ul>
-        <li>Mencampur jenis minyak ATF yang berbeza</li>
-        <li>Menggunakan minyak enjin sebagai ganti ATF</li>
-        <li>Tidak mengosongkan minyak lama sepenuhnya</li>
-        <li>Mengabaikan penggantian filter</li>
+        <li>✅ Drain dan flush minyak lama</li>
+        <li>✅ Ganti dengan minyak spec yang betul</li>
+        <li>✅ Tukar filter ATF/CVT</li>
+        <li>✅ Tukar gasket pan</li>
+        <li>✅ Visual inspection untuk kebocoran</li>
+        <li>✅ Check tahap minyak final</li>
+        <li>✅ Test drive</li>
+      </ul>
+
+      <h3>Servis Major (RM 800 - RM 2,000)</h3>
+      <p>Dilakukan setiap 80,000-100,000km atau jika ada masalah:</p>
+      <ul>
+        <li>✅ Semua item servis minor</li>
+        <li>✅ Buka dan inspect valve body</li>
+        <li>✅ Bersih atau ganti solenoid</li>
+        <li>✅ Check clutch pack condition</li>
+        <li>✅ Inspect chain/belt CVT</li>
+        <li>✅ Replace seal yang bocor</li>
+        <li>✅ Computer diagnostic</li>
+        <li>✅ Reset adaptasi ECU</li>
+      </ul>
+
+      <h2>Keadaan Pemanduan Yang Memerlukan Servis Lebih Kerap</h2>
+
+      <h3>Kurangkan Selang Servis Jika:</h3>
+      <ul>
+        <li><strong>Pemanduan Dalam Bandar:</strong> Stop-and-go traffic setiap hari</li>
+        <li><strong>Pemanduan Jarak Jauh:</strong> Kerap memandu lebuh raya untuk jarak jauh</li>
+        <li><strong>Membawa Beban Berat:</strong> Selalu bawa penumpang/barang yang banyak</li>
+        <li><strong>Pemanduan Berbukit:</strong> Tinggal di kawasan berbukit</li>
+        <li><strong>Pemanduan Agresif:</strong> Suka drive sporty atau kick-down kerap</li>
+        <li><strong>Cuaca Panas:</strong> Kerap memandu dalam cuaca sangat panas</li>
+        <li><strong>Towing:</strong> Kerap tarik trailer atau tow kenderaan lain</li>
+      </ul>
+
+      <p><strong>Recommendation:</strong> Kurangkan interval servis sebanyak 30-40% jika anda dalam kategori di atas. Contoh: Jika standard 60,000km, buat servis pada 40,000km.</p>
+
+      <h2>Tanda-Tanda Gearbox Perlu Servis Segera</h2>
+      <p>Walaupun belum sampai milestone servis, bawa kereta untuk check jika ada tanda-tanda ini:</p>
+
+      <h3>Tanda Emergency:</h3>
+      <ul>
+        <li>🚨 Bunyi bising yang kuat dari gearbox</li>
+        <li>🚨 Gearbox slip atau tersentak</li>
+        <li>🚨 Lampu warning gearbox menyala</li>
+        <li>🚨 Bau hangus atau terbakar</li>
+        <li>🚨 Minyak bocor (nampak stain di lantai)</li>
+        <li>🚨 Kelewatan bertindak balas ketika shift gear</li>
+      </ul>
+
+      <h3>Tanda Perlu Check:</h3>
+      <ul>
+        <li>⚠️ Minyak warna gelap atau hitam</li>
+        <li>⚠️ Bau minyak yang tidak normal</li>
+        <li>⚠️ RPM tinggi tapi tak memecut</li>
+        <li>⚠️ Gear shift tidak smooth</li>
+        <li>⚠️ Getaran ringan ketika drive</li>
+      </ul>
+
+      <h2>Jenis Minyak Yang Betul Sangat Penting</h2>
+
+      <h3>Untuk CVT:</h3>
+      <ul>
+        <li><strong>Honda CVT:</strong> Honda Genuine CVT Fluid</li>
+        <li><strong>Nissan CVT:</strong> Nissan NS-2 atau NS-3</li>
+        <li><strong>Toyota CVT:</strong> Toyota CVT Fluid TC atau FE</li>
+        <li><strong>Perodua CVT:</strong> Daihatsu CVTF atau equivalent</li>
+      </ul>
+
+      <p><strong>Warning:</strong> Jangan guna minyak ATF biasa untuk CVT! Ini boleh rosakkan gearbox dalam masa singkat.</p>
+
+      <h3>Untuk Automatik:</h3>
+      <ul>
+        <li><strong>Honda:</strong> Honda ATF DW-1 atau Z-1</li>
+        <li><strong>Toyota:</strong> Toyota ATF WS</li>
+        <li><strong>Nissan:</strong> Nissan Matic-S atau J</li>
+        <li><strong>Universal:</strong> Dexron VI (untuk kereta lama)</li>
+      </ul>
+
+      <h2>Berapa Kos Servis Gearbox?</h2>
+
+      <table>
+        <tr>
+          <th>Jenis Servis</th>
+          <th>Kos (RM)</th>
+          <th>Masa Diperlukan</th>
+        </tr>
+        <tr>
+          <td>CVT Oil Change</td>
+          <td>300 - 500</td>
+          <td>2-3 jam</td>
+        </tr>
+        <tr>
+          <td>ATF Change (Drain & Fill)</td>
+          <td>250 - 400</td>
+          <td>1-2 jam</td>
+        </tr>
+        <tr>
+          <td>ATF Flush (Complete)</td>
+          <td>500 - 800</td>
+          <td>3-4 jam</td>
+        </tr>
+        <tr>
+          <td>Filter Replacement</td>
+          <td>80 - 200</td>
+          <td>30 min - 1 jam</td>
+        </tr>
+        <tr>
+          <td>Servis Major + Inspection</td>
+          <td>800 - 2,000</td>
+          <td>1 hari</td>
+        </tr>
+      </table>
+
+      <h2>ROI (Return on Investment) Servis Berkala</h2>
+      <p>Mari kita kira value servis berkala berbanding kos pembaikan:</p>
+
+      <h3>Scenario A: Rajin Servis</h3>
+      <ul>
+        <li>Servis pada 40k km: RM 400</li>
+        <li>Servis pada 80k km: RM 400</li>
+        <li>Servis pada 120k km: RM 500</li>
+        <li><strong>Total dalam 120,000km: RM 1,300</strong></li>
+        <li><strong>Gearbox tahan sampai 200,000km+</strong></li>
+      </ul>
+
+      <h3>Scenario B: Jarang Servis</h3>
+      <ul>
+        <li>Skip servis berkala: RM 0 (short term)</li>
+        <li>Overhaul pada 80,000km: RM 5,500</li>
+        <li>Replace gearbox pada 120,000km: RM 8,000</li>
+        <li><strong>Total: RM 13,500</strong></li>
+        <li><strong>Sakit kepala dan stress: Priceless</strong></li>
+      </ul>
+
+      <p><strong>Kesimpulan:</strong> Servis berkala jimatkan RM 12,200 dan banyak masalah!</p>
+
+      <h2>Tips Untuk Memanjangkan Tempoh Antara Servis</h2>
+      <ul>
+        <li>🚗 Panaskan enjin 30-60 saat sebelum drive</li>
+        <li>🚗 Elakkan akselerasi aggressive</li>
+        <li>🚗 Shift ke N bila berhenti lama di lampu isyarat</li>
+        <li>🚗 Jangan overload kenderaan</li>
+        <li>🚗 Servis enjin mengikut jadual (engine health = gearbox health)</li>
+        <li>🚗 Check minyak gearbox setiap 6 bulan</li>
+        <li>🚗 Drive smooth dan predictable</li>
       </ul>
 
       <h2>Kesimpulan</h2>
-      <p>Memilih dan menggunakan minyak ATF yang betul adalah kunci kepada prestasi dan jangka hayat gearbox automatik anda. Jangan berkompromi dengan kualiti minyak untuk menjimatkan kos.</p>
+      <p>Gearbox yang diselengara dengan baik boleh bertahan lebih lama dari enjin! Dengan mengikuti jadual servis yang betul, anda boleh:</p>
+      <ul>
+        <li>✅ Menjimatkan ribuan ringgit dalam jangka panjang</li>
+        <li>✅ Elakkan breakdown yang tidak dijangka</li>
+        <li>✅ Menikmati pemanduan yang smooth dan selesa</li>
+        <li>✅ Mengekalkan nilai jualan semula kereta tinggi</li>
+        <li>✅ Peace of mind setiap kali drive</li>
+      </ul>
+
+      <p><strong>Jangan tunggu sampai rosak baru servis!</strong> Hubungi One X Transmission Shah Alam hari ini untuk tempah slot servis gearbox anda. Kami gunakan minyak spec original dan technician berpengalaman lebih 15 tahun.</p>
     `,
-    image: 'service-automatic.jpg',
-    category: 'Spare Parts',
-    date: '10 Ogos 2024',
-    readTime: '6 minit bacaan',
+    image: 'service-overhaul.jpg',
+    category: 'Penyelenggaraan',
+    date: '25 Oktober 2024',
+    readTime: '5 minit bacaan',
     author: 'Pakar Gearbox Team',
-    tags: ['ATF', 'Minyak', 'Gearbox', 'Automatik']
+    tags: ['Servis', 'Jadual', 'Penyelenggaraan', 'Schedule']
   },
   {
     id: 4,
-    slug: 'kos-overhaul-cvt-apa-yang-perlu-tahu',
-    title: 'Kos Overhaul CVT - Apa Yang Perlu Tahu',
-    excerpt: 'Pemahaman lengkap tentang kos overhaul CVT dan faktor-faktor yang mempengaruhi harga.',
+    slug: 'panduan-kos-repair-gearbox-malaysia',
+    title: 'Panduan Lengkap Kos Repair Gearbox di Malaysia 2024',
+    excerpt: 'Berapa kos sebenar untuk repair atau overhaul gearbox? Panduan lengkap dengan breakdown harga untuk semua jenama kereta di Malaysia.',
     content: `
-      <h2>Memahami Kos Overhaul CVT</h2>
-      <p>Overhaul CVT adalah pelaburan besar, tetapi sering kali lebih jimat berbanding membeli gearbox baharu. Mari kita fahami faktor-faktor yang mempengaruhi kos.</p>
-      
-      <h3>1. Julat Kos Overhaul CVT</h3>
+      <h2>Pengenalan</h2>
+      <p>Salah satu soalan paling kerap ditanya oleh pemilik kereta adalah: "<strong>Berapa kos untuk repair gearbox saya?</strong>" Jawapannya tidak mudah kerana ia bergantung kepada banyak faktor. Artikel ini akan berikan anda panduan lengkap tentang kos repair gearbox di Malaysia untuk tahun 2024.</p>
+
+      <h2>Faktor Yang Mempengaruhi Kos Repair</h2>
+
+      <h3>1. Jenis Gearbox</h3>
       <ul>
-        <li><strong>CVT Asas:</strong> RM 2,500 - RM 3,500</li>
-        <li><strong>CVT Sederhana:</strong> RM 3,500 - RM 4,500</li>
-        <li><strong>CVT Premium:</strong> RM 4,500 - RM 6,000</li>
-        <li><strong>CVT Luxury/Hybrid:</strong> RM 6,000 - RM 8,000</li>
+        <li><strong>Manual:</strong> Paling murah untuk repair</li>
+        <li><strong>Automatik Konvensional:</strong> Sederhana</li>
+        <li><strong>CVT:</strong> Agak mahal</li>
+        <li><strong>DSG/DCT:</strong> Paling mahal</li>
       </ul>
 
-      <h3>2. Faktor-Faktor Yang Mempengaruhi Kos</h3>
-      <p><strong>Jenama dan Model Kenderaan:</strong></p>
+      <h3>2. Jenama & Model Kereta</h3>
       <ul>
-        <li>Nissan, Honda, Toyota - lebih murah</li>
-        <li>Mercedes, BMW, Audi - lebih mahal</li>
-        <li>Hybrid CVT - paling mahal</li>
+        <li><strong>Jenama Jepun (Honda, Toyota, Nissan):</strong> Spare parts lebih murah dan mudah dapat</li>
+        <li><strong>Jenama Tempatan (Perodua, Proton):</strong> Paling berpatutan</li>
+        <li><strong>Jenama Eropah (VW, BMW, Mercedes):</strong> Paling mahal</li>
+        <li><strong>Jenama Korea (Hyundai, Kia):</strong> Pertengahan</li>
       </ul>
 
-      <p><strong>Tahap Kerosakan:</strong></p>
-      <ul>
-        <li>Masalah minor - kos rendah</li>
-        <li>Kerosakan sederhana - kos pertengahan</li>
-        <li>Kerosakan major - kos tinggi</li>
-      </ul>
+      <h3>3. Tahap Kerosakan</h3>
+      <p>Minor, sederhana, atau major - setiap tahap ada kos berbeza.</p>
 
-      <h3>3. Apa Yang Termasuk Dalam Overhaul CVT?</h3>
-      <ul>
-        <li>Bongkar dan pembersihan menyeluruh</li>
-        <li>Penggantian belt/chain CVT</li>
-        <li>Ganti semua seal dan gasket</li>
-        <li>Valve body reconditioning</li>
-        <li>Penggantian pump dan solenoid</li>
-        <li>Filter dan minyak CVT baharu</li>
-        <li>Testing dan kalibrasi</li>
-      </ul>
+      <h2>Breakdown Kos Mengikut Jenis Servis</h2>
 
-      <h3>4. Spare Parts Yang Lazim Ditukar</h3>
+      <h3>Servis & Penyelenggaraan Rutin</h3>
       <table>
-        <tr><th>Komponen</th><th>Kos (RM)</th></tr>
-        <tr><td>CVT Belt/Chain</td><td>800 - 1,500</td></tr>
-        <tr><td>Valve Body</td><td>600 - 1,200</td></tr>
-        <tr><td>Oil Pump</td><td>400 - 800</td></tr>
-        <tr><td>Solenoid Set</td><td>300 - 600</td></tr>
-        <tr><td>Filter CVT</td><td>80 - 150</td></tr>
-        <tr><td>Minyak CVT</td><td>200 - 400</td></tr>
+        <tr>
+          <th>Servis</th>
+          <th>Kos (RM)</th>
+          <th>Masa (Jam)</th>
+        </tr>
+        <tr>
+          <td>Tukar Minyak ATF (Drain & Fill)</td>
+          <td>250 - 400</td>
+          <td>1 - 2</td>
+        </tr>
+        <tr>
+          <td>Tukar Minyak CVT</td>
+          <td>300 - 500</td>
+          <td>2 - 3</td>
+        </tr>
+        <tr>
+          <td>Flush ATF (Complete)</td>
+          <td>500 - 800</td>
+          <td>3 - 4</td>
+        </tr>
+        <tr>
+          <td>Tukar Filter Gearbox</td>
+          <td>80 - 200</td>
+          <td>0.5 - 1</td>
+        </tr>
+        <tr>
+          <td>Tukar Gasket Pan</td>
+          <td>50 - 150</td>
+          <td>1 - 2</td>
+        </tr>
       </table>
 
-      <h3>5. Kos Tersembunyi Yang Perlu Diambil Kira</h3>
+      <h3>Repair Minor (Masalah Kecil)</h3>
+      <table>
+        <tr>
+          <th>Jenis Repair</th>
+          <th>Kos (RM)</th>
+          <th>Masa (Hari)</th>
+        </tr>
+        <tr>
+          <td>Tukar Solenoid (1 unit)</td>
+          <td>300 - 600</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Repair Kebocoran Seal</td>
+          <td>200 - 500</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Tukar Speed Sensor</td>
+          <td>150 - 400</td>
+          <td>0.5</td>
+        </tr>
+        <tr>
+          <td>Repair Cable/Linkage</td>
+          <td>180 - 350</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Clean Valve Body</td>
+          <td>500 - 1,000</td>
+          <td>1 - 2</td>
+        </tr>
+      </table>
+
+      <h3>Repair Sederhana</h3>
+      <table>
+        <tr>
+          <th>Jenis Repair</th>
+          <th>Kos (RM)</th>
+          <th>Masa (Hari)</th>
+        </tr>
+        <tr>
+          <td>Tukar Valve Body</td>
+          <td>1,200 - 2,500</td>
+          <td>2 - 3</td>
+        </tr>
+        <tr>
+          <td>Tukar Torque Converter</td>
+          <td>1,500 - 3,000</td>
+          <td>2 - 3</td>
+        </tr>
+        <tr>
+          <td>Tukar Oil Pump</td>
+          <td>800 - 1,800</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Tukar Clutch Pack (1 set)</td>
+          <td>1,000 - 2,000</td>
+          <td>2 - 3</td>
+        </tr>
+        <tr>
+          <td>Tukar CVT Belt/Chain</td>
+          <td>1,500 - 3,000</td>
+          <td>3 - 4</td>
+        </tr>
+      </table>
+
+      <h3>Overhaul & Rebuild (Major)</h3>
+      <table>
+        <tr>
+          <th>Jenis Gearbox</th>
+          <th>Overhaul (RM)</th>
+          <th>Rebuild (RM)</th>
+          <th>Masa (Hari)</th>
+        </tr>
+        <tr>
+          <td>Manual 5-Speed</td>
+          <td>1,500 - 2,500</td>
+          <td>2,000 - 3,500</td>
+          <td>3 - 5</td>
+        </tr>
+        <tr>
+          <td>Automatik 4-Speed</td>
+          <td>2,500 - 4,000</td>
+          <td>3,500 - 5,500</td>
+          <td>4 - 7</td>
+        </tr>
+        <tr>
+          <td>Automatik 6-Speed+</td>
+          <td>3,500 - 5,500</td>
+          <td>5,000 - 7,500</td>
+          <td>5 - 10</td>
+        </tr>
+        <tr>
+          <td>CVT (Asas)</td>
+          <td>3,000 - 4,500</td>
+          <td>4,000 - 6,000</td>
+          <td>5 - 7</td>
+        </tr>
+        <tr>
+          <td>CVT (Premium/Hybrid)</td>
+          <td>5,000 - 7,000</td>
+          <td>6,500 - 10,000</td>
+          <td>7 - 14</td>
+        </tr>
+        <tr>
+          <td>DSG/DCT</td>
+          <td>5,500 - 8,500</td>
+          <td>7,500 - 12,000</td>
+          <td>7 - 14</td>
+        </tr>
+      </table>
+
+      <h2>Kos Mengikut Jenama Kereta Popular</h2>
+
+      <h3>Perodua (Myvi, Axia, Bezza, Alza)</h3>
       <ul>
-        <li><strong>Diagnosis:</strong> RM 100 - RM 200</li>
-        <li><strong>Towing:</strong> RM 150 - RM 300</li>
-        <li><strong>Sewa kereta:</strong> RM 80 - RM 150/hari</li>
-        <li><strong>Spare parts tambahan:</strong> 10-20% dari anggaran</li>
+        <li><strong>Servis CVT:</strong> RM 300 - 450</li>
+        <li><strong>Repair Minor:</strong> RM 500 - 1,200</li>
+        <li><strong>Overhaul CVT:</strong> RM 3,000 - 4,500</li>
+        <li><strong>CVT Recon:</strong> RM 3,500 - 5,000</li>
       </ul>
 
-      <h2>Tips Untuk Mengurangkan Kos</h2>
+      <h3>Proton (Saga, Persona, X50, X70)</h3>
       <ul>
-        <li>Dapatkan quotation dari beberapa bengkel</li>
-        <li>Tanya tentang spare parts aftermarket</li>
-        <li>Pertimbangkan reconditioning vs penggantian</li>
-        <li>Periksa warranty yang ditawarkan</li>
-        <li>Buat overhaul seawal mungkin sebelum kerosakan bertambah</li>
+        <li><strong>Servis CVT/Auto:</strong> RM 350 - 500</li>
+        <li><strong>Repair Minor:</strong> RM 600 - 1,500</li>
+        <li><strong>Overhaul:</strong> RM 3,500 - 5,500</li>
+        <li><strong>DCT Repair (X50/X70):</strong> RM 4,000 - 7,000</li>
       </ul>
 
-      <h2>Tanda-Tanda CVT Perlu Overhaul</h2>
+      <h3>Honda (City, Jazz, Civic, HR-V, CR-V)</h3>
       <ul>
-        <li>Slip ketika memecut</li>
-        <li>Bunyi bising yang kuat</li>
-        <li>Getaran ketika memandu</li>
-        <li>Kenderaan tidak bergerak walaupun gear masuk</li>
-        <li>Warning light menyala</li>
+        <li><strong>Servis CVT:</strong> RM 400 - 600</li>
+        <li><strong>Repair Minor:</strong> RM 800 - 1,800</li>
+        <li><strong>Overhaul CVT:</strong> RM 4,000 - 6,000</li>
+        <li><strong>CVT Recon:</strong> RM 4,500 - 6,500</li>
       </ul>
 
-      <h2>Alternatif Kepada Overhaul</h2>
-      <p><strong>CVT Recon:</strong> RM 3,000 - RM 5,000</p>
-      <p><strong>CVT Baharu:</strong> RM 8,000 - RM 15,000</p>
-      <p><strong>Tukar ke Manual:</strong> RM 5,000 - RM 8,000 (jika possible)</p>
+      <h3>Toyota (Vios, Corolla, Camry, Harrier)</h3>
+      <ul>
+        <li><strong>Servis CVT/Auto:</strong> RM 400 - 650</li>
+        <li><strong>Repair Minor:</strong> RM 900 - 2,000</li>
+        <li><strong>Overhaul:</strong> RM 4,500 - 7,000</li>
+        <li><strong>Hybrid Transmission:</strong> RM 6,000 - 10,000</li>
+      </ul>
+
+      <h3>Nissan (Almera, X-Trail, Serena)</h3>
+      <ul>
+        <li><strong>Servis CVT:</strong> RM 450 - 650</li>
+        <li><strong>Repair CVT:</strong> RM 1,000 - 2,500</li>
+        <li><strong>Overhaul CVT:</strong> RM 4,500 - 6,500</li>
+      </ul>
+
+      <p><strong>Nota:</strong> Nissan CVT terkenal dengan masalah, jadi kos repair mungkin lebih kerap.</p>
+
+      <h3>Mercedes/BMW/Audi</h3>
+      <ul>
+        <li><strong>Servis Auto:</strong> RM 800 - 1,500</li>
+        <li><strong>Repair Minor:</strong> RM 2,000 - 5,000</li>
+        <li><strong>Overhaul:</strong> RM 8,000 - 15,000</li>
+        <li><strong>Replace Unit:</strong> RM 15,000 - 35,000</li>
+      </ul>
+
+      <h2>Kos Tambahan Yang Perlu Dipertimbangkan</h2>
+
+      <h3>Sebelum Repair</h3>
+      <ul>
+        <li><strong>Diagnostic Scan:</strong> RM 80 - 200</li>
+        <li><strong>Inspection Fee:</strong> RM 50 - 150</li>
+        <li><strong>Towing (jika perlu):</strong> RM 150 - 400</li>
+      </ul>
+
+      <h3>Semasa Repair</h3>
+      <ul>
+        <li><strong>Spare Parts Tambahan:</strong> 10-20% dari kos asal</li>
+        <li><strong>Labour Extra (jika kompleks):</strong> RM 50-80/jam</li>
+        <li><strong>Sewa Kereta:</strong> RM 80 - 150/hari</li>
+      </ul>
+
+      <h3>Selepas Repair</h3>
+      <ul>
+        <li><strong>Servis Susulan (1 bulan):</strong> RM 50 - 100</li>
+        <li><strong>Warranty Extension (optional):</strong> RM 300 - 800</li>
+      </ul>
+
+      <h2>Tips Untuk Menjimatkan Kos</h2>
+
+      <h3>1. Dapatkan Multiple Quotations</h3>
+      <p>Jangan ambil quotation pertama sahaja. Dapatkan sekurang-kurangnya 3 bengkel untuk compare:</p>
+      <ul>
+        <li>Bengkel specialist gearbox</li>
+        <li>Bengkel jenama (authorised service center)</li>
+        <li>Bengkel biasa yang dipercayai</li>
+      </ul>
+
+      <h3>2. Tanya Tentang Spare Parts</h3>
+      <ul>
+        <li><strong>Original Parts:</strong> Paling mahal tapi quality terjamin</li>
+        <li><strong>OEM Parts:</strong> Good quality, lebih murah 20-30%</li>
+        <li><strong>Aftermarket:</strong> Paling murah tapi risk kualiti</li>
+        <li><strong>Recon Parts:</strong> Option tengah-tengah</li>
+      </ul>
+
+      <h3>3. Check Warranty</h3>
+      <p>Pastikan ada warranty untuk:</p>
+      <ul>
+        <li>Spare parts (minimum 3-6 bulan)</li>
+        <li>Workmanship (minimum 1-3 bulan)</li>
+        <li>Mileage warranty (contoh: 10,000km)</li>
+      </ul>
+
+      <h3>4. Repair Awal</h3>
+      <p>Kos repair pada peringkat awal vs lambat:</p>
+      <table>
+        <tr>
+          <th>Masalah</th>
+          <th>Repair Awal</th>
+          <th>Repair Lambat</th>
+          <th>Jimat</th>
+        </tr>
+        <tr>
+          <td>Minyak Kotor</td>
+          <td>RM 400</td>
+          <td>RM 5,000</td>
+          <td>RM 4,600</td>
+        </tr>
+        <tr>
+          <td>Solenoid Rosak</td>
+          <td>RM 800</td>
+          <td>RM 4,500</td>
+          <td>RM 3,700</td>
+        </tr>
+        <tr>
+          <td>Minor Slip</td>
+          <td>RM 1,500</td>
+          <td>RM 6,500</td>
+          <td>RM 5,000</td>
+        </tr>
+      </table>
+
+      <h3>5. Pertimbangkan Recon Unit</h3>
+      <p>Jika kos overhaul terlalu mahal, pertimbangkan gearbox recon:</p>
+      <ul>
+        <li>Biasanya 20-40% lebih murah dari rebuild</li>
+        <li>Datang dengan warranty</li>
+        <li>Masa pemasangan lebih cepat</li>
+        <li>Tapi perlu cari supplier yang reliable</li>
+      </ul>
+
+      <h2>Red Flags - Bila Perlu Waspada</h2>
+
+      <h3>Harga Terlalu Murah</h3>
+      <ul>
+        <li>Mungkin guna spare parts murah/rosak</li>
+        <li>Tiada warranty proper</li>
+        <li>Kerja tidak complete</li>
+        <li>Hidden charges nanti</li>
+      </ul>
+
+      <h3>Harga Terlalu Mahal</h3>
+      <ul>
+        <li>Overcharge untuk brand name</li>
+        <li>Charge untuk kerja yang tidak perlu</li>
+        <li>Markup spare parts terlalu tinggi</li>
+      </ul>
+
+      <h3>Bengkel Tidak Profesional</h3>
+      <ul>
+        <li>Tak boleh explain masalah dengan jelas</li>
+        <li>Tiada quotation bertulis</li>
+        <li>Tiada warranty document</li>
+        <li>Lokasi tidak tetap/credible</li>
+      </ul>
+
+      <h2>Soalan Untuk Tanya Bengkel</h2>
+
+      <p>Sebelum commit untuk repair, tanya soalan ini:</p>
+
+      <ol>
+        <li>Apa exactly masalah gearbox saya?</li>
+        <li>Apa spare parts yang perlu ditukar?</li>
+        <li>Spare parts ori, OEM, atau aftermarket?</li>
+        <li>Berapa lama masa repair?</li>
+        <li>Ada warranty? Berapa lama?</li>
+        <li>Boleh saya tengok gearbox lama saya?</li>
+        <li>Kos final termasuk apa sahaja?</li>
+        <li>Ada additional cost yang mungkin timbul?</li>
+        <li>Apa jenis minyak yang akan digunakan?</li>
+        <li>Bila perlu datang untuk follow-up?</li>
+      </ol>
 
       <h2>Kesimpulan</h2>
-      <p>Walaupun kos overhaul CVT mungkin kelihatan tinggi, ia masih lebih jimat berbanding penggantian dengan unit baharu. Yang penting adalah memilih bengkel yang berpengalaman dan mendapat warranty yang sesuai.</p>
+
+      <p>Kos repair gearbox di Malaysia boleh berbeza-beza bergantung kepada banyak faktor. Sebagai guideline:</p>
+
+      <ul>
+        <li><strong>Servis Rutin:</strong> RM 300 - 600</li>
+        <li><strong>Repair Minor:</strong> RM 500 - 2,000</li>
+        <li><strong>Repair Sederhana:</strong> RM 2,000 - 4,000</li>
+        <li><strong>Overhaul/Rebuild:</strong> RM 3,000 - 12,000</li>
+      </ul>
+
+      <p><strong>Ingat:</strong> Repair awal adalah kunci untuk menjimatkan kos. Jangan tunggu sampai gearbox rosak teruk baru nak repair!</p>
+
+      <p>Untuk quotation percuma dan nasihat professional, hubungi <strong>One X Transmission Shah Alam</strong>. Kami sedia membantu dengan pengalaman lebih 15 tahun dalam repair gearbox semua jenama.</p>
     `,
     image: 'service-others.jpg',
-    category: 'Kos & Budget',
-    date: '8 Ogos 2024',
-    readTime: '7 minit bacaan',
+    category: 'Kos & Harga',
+    date: '22 Oktober 2024',
+    readTime: '8 minit bacaan',
     author: 'Pakar Gearbox Team',
-    tags: ['Overhaul', 'Kos', 'CVT', 'Budget']
+    tags: ['Kos', 'Harga', 'Repair', 'Budget', 'Malaysia']
+  },
+  {
+    id: 5,
+    slug: 'masalah-gearbox-cvt-perodua',
+    title: 'Masalah Biasa Gearbox CVT Perodua: Myvi, Axia & Bezza',
+    excerpt: 'Panduan khas untuk pemilik Perodua. Ketahui masalah biasa gearbox CVT Myvi, Axia, dan Bezza serta cara mengatasinya dengan betul.',
+    content: `
+      <h2>Pengenalan</h2>
+      <p>Perodua adalah jenama kereta paling popular di Malaysia, dan kebanyakan model terkini menggunakan gearbox CVT (D-CVT). Walaupun CVT Perodua dikenali sebagai reliable, ia tetap ada masalah biasa yang perlu pemilik ketahui.</p>
+
+      <p>Artikel ini khusus untuk pemilik:</p>
+      <ul>
+        <li>Perodua Myvi (2017 dan ke atas dengan D-CVT)</li>
+        <li>Perodua Axia (2019 dan ke atas dengan D-CVT)</li>
+        <li>Perodua Bezza (2020 dan ke atas dengan D-CVT)</li>
+        <li>Perodua Alza (2022 dan ke atas dengan D-CVT)</li>
+      </ul>
+
+      <h2>Apa itu D-CVT Perodua?</h2>
+      <p>D-CVT (Dual-mode CVT) adalah gearbox CVT yang dikembangkan oleh Daihatsu khas untuk kereta kecil. Ia berbeza dengan CVT biasa kerana:</p>
+
+      <ul>
+        <li>Lebih compact dan ringan</li>
+        <li>Menggunakan split gear untuk gear rendah</li>
+        <li>Lebih fuel efficient</li>
+        <li>Lebih sesuai untuk pemanduan bandar</li>
+      </ul>
+
+      <h2>5 Masalah Biasa CVT Perodua</h2>
+
+      <h3>1. Gearbox Tersentak (Jerking)</h3>
+      <p>Ini adalah complaint #1 dari pemilik Perodua CVT.</p>
+
+      <h4>Simptom:</h4>
+      <ul>
+        <li>Kereta tersentak ketika start bergerak</li>
+        <li>Jerking ketika slow speed (10-30 km/j)</li>
+        <li>Terasa "step" ketika CVT switch mode</li>
+        <li>Lebih teruk ketika aircond on</li>
+        <li>Worse pada waktu pagi (enjin sejuk)</li>
+      </ul>
+
+      <h4>Punca:</h4>
+      <ul>
+        <li><strong>ECU Mapping:</strong> Software CVT yang perlu update</li>
+        <li><strong>Minyak CVT:</strong> Kualiti atau tahap tidak sesuai</li>
+        <li><strong>Sensor Issue:</strong> Sensor tidak baca dengan tepat</li>
+        <li><strong>Clutch Engagement:</strong> Split gear clutch tidak engage smooth</li>
+      </ul>
+
+      <h4>Penyelesaian:</h4>
+      <ul>
+        <li>✅ Software update di Perodua service center (FOC jika dalam warranty)</li>
+        <li>✅ Tukar minyak CVT dengan spec yang betul</li>
+        <li>✅ Reset ECU adaptation</li>
+        <li>✅ Check dan adjust throttle body</li>
+      </ul>
+
+      <h4>Kos:</h4>
+      <ul>
+        <li>Software update: FOC - RM 150</li>
+        <li>Tukar minyak CVT: RM 300 - 450</li>
+        <li>Sensor replacement: RM 200 - 400</li>
+      </ul>
+
+      <h3>2. Bunyi "Whining" atau Menderu</h3>
+      <p>Bunyi pelik dari gearbox yang kedengaran ketika memandu.</p>
+
+      <h4>Simptom:</h4>
+      <ul>
+        <li>Bunyi "wheee" atau menderu ketika memecut</li>
+        <li>Lebih kuat pada 60-80 km/j</li>
+        <li>Bunyi hilang bila lepas minyak</li>
+        <li>Kadang-kadang bunyi dari depan kereta</li>
+      </ul>
+
+      <h4>Punca:</h4>
+      <ul>
+        <li><strong>CVT Belt:</strong> Belt CVT mula haus atau dry</li>
+        <li><strong>Oil Pump:</strong> Pump bearing haus</li>
+        <li><strong>Minyak Rendah:</strong> Tahap minyak CVT kurang</li>
+        <li><strong>Design Characteristic:</strong> Normal untuk CVT (tapi tak patut kuat sangat)</li>
+      </ul>
+
+      <h4>Penyelesaian:</h4>
+      <ul>
+        <li>Check tahap minyak CVT</li>
+        <li>Top-up atau tukar minyak jika perlu</li>
+        <li>Inspection CVT belt condition</li>
+        <li>Jika bunyi terlalu kuat, mungkin perlu overhaul</li>
+      </ul>
+
+      <h4>Kos:</h4>
+      <ul>
+        <li>Top-up minyak: RM 50 - 100</li>
+        <li>Tukar minyak: RM 300 - 450</li>
+        <li>Overhaul CVT: RM 3,000 - 4,500</li>
+      </ul>
+
+      <h3>3. Pecutan Lemah / Loss of Power</h3>
+      <p>Kereta rasa slow atau tak ada power ketika memecut.</p>
+
+      <h4>Simptom:</h4>
+      <ul>
+        <li>Pecutan sangat slow walaupun tekan minyak penuh</li>
+        <li>Kereta macam "tertahan" ketika naik bukit</li>
+        <li>RPM tinggi (3000-4000) tapi kereta tidak laju</li>
+        <li>Overtake jadi susah dan berbahaya</li>
+      </ul>
+
+      <h4>Punca:</h4>
+      <ul>
+        <li><strong>CVT Slip:</strong> Belt tidak grip dengan baik</li>
+        <li><strong>Minyak CVT Rosak:</strong> Minyak dah tak function</li>
+        <li><strong>Engine Issue:</strong> Bukan masalah gearbox (check enjin dulu)</li>
+        <li><strong>Clutch Worn:</strong> Split gear clutch dah haus</li>
+      </ul>
+
+      <h4>Penyelesaian:</h4>
+      <ul>
+        <li>Diagnostic scan untuk identify exact issue</li>
+        <li>Tukar minyak CVT dengan flush</li>
+        <li>Check engine health (spark plugs, air filter, fuel system)</li>
+        <li>Jika CVT slip teruk, perlu overhaul</li>
+      </ul>
+
+      <h4>Kos:</h4>
+      <ul>
+        <li>Diagnostic: RM 80 - 150</li>
+        <li>CVT flush: RM 500 - 700</li>
+        <li>Engine tuning: RM 300 - 600</li>
+        <li>CVT overhaul: RM 3,500 - 5,000</li>
+      </ul>
+
+      <h3>4. Warning Light CVT Menyala</h3>
+      <p>Lampu warning CVT atau check engine light menyala di dashboard.</p>
+
+      <h4>Simptom:</h4>
+      <ul>
+        <li>Warning light berkelip atau stay on</li>
+        <li>Kadang-kadang kereta masuk "limp mode" (limited power)</li>
+        <li>Gearbox tidak shift properly</li>
+        <li>Beep sound dari dashboard</li>
+      </ul>
+
+      <h4>Punca:</h4>
+      <ul>
+        <li><strong>Sensor Failure:</strong> Speed sensor, pressure sensor rosak</li>
+        <li><strong>Solenoid Issue:</strong> Solenoid tidak berfungsi</li>
+        <li><strong>Low Fluid:</strong> Minyak CVT terlalu rendah</li>
+        <li><strong>Overheating:</strong> CVT terlalu panas</li>
+        <li><strong>ECU Problem:</strong> Computer CVT ada issue</li>
+      </ul>
+
+      <h4>Penyelesaian:</h4>
+      <ul>
+        <li><strong>Langkah 1:</strong> Scan error code dengan diagnostic tool</li>
+        <li><strong>Langkah 2:</strong> Check minyak CVT level dan condition</li>
+        <li><strong>Langkah 3:</strong> Repair atau replace komponen yang rosak</li>
+        <li><strong>Langkah 4:</strong> Clear error code dan test drive</li>
+      </ul>
+
+      <h4>Kos:</h4>
+      <ul>
+        <li>Diagnostic scan: RM 80 - 150</li>
+        <li>Sensor replacement: RM 200 - 500</li>
+        <li>Solenoid replacement: RM 400 - 800</li>
+        <li>ECU repair/replace: RM 1,500 - 3,000</li>
+      </ul>
+
+      <h3>5. Kereta Roll Back di Bukit</h3>
+      <p>Kereta berundur (roll back) ketika start dari stop di bukit.</p>
+
+      <h4>Simptom:</h4>
+      <ul>
+        <li>Kereta undur sikit ketika start di bukit</li>
+        <li>Perlu brek kuat-kuat untuk hold kereta</li>
+        <li>Hill start assist tak berfungsi</li>
+        <li>Scary untuk new driver</li>
+      </ul>
+
+      <h4>Punca:</h4>
+      <ul>
+        <li><strong>CVT Design:</strong> CVT naturally ada sikit delay (normal)</li>
+        <li><strong>Hill Start Assist Off:</strong> Feature mungkin off atau rosak</li>
+        <li><strong>Clutch Delay:</strong> Split gear lambat engage</li>
+        <li><strong>Driver Technique:</strong> Perlu adjust cara memandu</li>
+      </ul>
+
+      <h4>Penyelesaian:</h4>
+      <ul>
+        <li>Enable Hill Start Assist (check settings)</li>
+        <li>Guna handbrake teknik untuk hill start</li>
+        <li>Software update untuk improve response</li>
+        <li>Check brake hold function</li>
+      </ul>
+
+      <h4>Kos:</h4>
+      <ul>
+        <li>Software update: FOC - RM 150</li>
+        <li>Hill start sensor: RM 300 - 600</li>
+      </ul>
+
+      <h2>Jadual Penyelenggaraan CVT Perodua</h2>
+
+      <table>
+        <tr>
+          <th>Mileage/Masa</th>
+          <th>Servis Yang Perlu</th>
+          <th>Kos</th>
+        </tr>
+        <tr>
+          <td>40,000 km atau 2 tahun</td>
+          <td>Tukar minyak CVT pertama kali</td>
+          <td>RM 300 - 450</td>
+        </tr>
+        <tr>
+          <td>80,000 km atau 4 tahun</td>
+          <td>Tukar minyak CVT + filter</td>
+          <td>RM 350 - 500</td>
+        </tr>
+        <tr>
+          <td>120,000 km atau 6 tahun</td>
+          <td>Major service + inspection</td>
+          <td>RM 500 - 800</td>
+        </tr>
+        <tr>
+          <td>Setiap 6 bulan</td>
+          <td>Check minyak level & condition</td>
+          <td>FOC</td>
+        </tr>
+      </table>
+
+      <h2>Tips Penjagaan CVT Perodua</h2>
+
+      <h3>DO's (Buat Ini):</h3>
+      <ul>
+        <li>✅ Panaskan enjin 30-60 saat sebelum drive</li>
+        <li>✅ Drive smooth dan avoid aggressive acceleration</li>
+        <li>✅ Tukar minyak CVT mengikut jadual (40,000km)</li>
+        <li>✅ Guna minyak CVT spec yang betul (Daihatsu CVTF atau equivalent)</li>
+        <li>✅ Software update bila ada recall dari Perodua</li>
+        <li>✅ Servis di bengkel yang faham CVT Perodua</li>
+        <li>✅ Monitor minyak CVT condition setiap 6 bulan</li>
+      </ul>
+
+      <h3>DON'Ts (Jangan Buat Ini):</h3>
+      <ul>
+        <li>❌ Jangan kick-down terlalu kerap</li>
+        <li>❌ Jangan overload kereta (maksimum 5 orang + bagasi)</li>
+        <li>❌ Jangan tow kenderaan lain</li>
+        <li>❌ Jangan guna minyak ATF biasa (mesti CVT fluid)</li>
+        <li>❌ Jangan skip servis CVT</li>
+        <li>❌ Jangan ignore warning light</li>
+        <li>❌ Jangan drive aggressive macam manual car</li>
+      </ul>
+
+      <h2>Masalah Specific Untuk Setiap Model</h2>
+
+      <h3>Perodua Myvi D-CVT</h3>
+      <ul>
+        <li><strong>Issue Paling Biasa:</strong> Jerking pada low speed</li>
+        <li><strong>Recall:</strong> Ada software update untuk improve shifting</li>
+        <li><strong>Warranty Coverage:</strong> 5 tahun/150,000km untuk CVT</li>
+      </ul>
+
+      <h3>Perodua Axia D-CVT</h3>
+      <ul>
+        <li><strong>Issue Paling Biasa:</strong> Bunyi whining lebih ketara</li>
+        <li><strong>Tips:</strong> Enjin 1.0L, jadi jangan expect power besar</li>
+        <li><strong>Reminder:</strong> Change oil at 40k km without fail</li>
+      </ul>
+
+      <h3>Perodua Bezza D-CVT</h3>
+      <ul>
+        <li><strong>Issue Paling Biasa:</strong> Roll back di bukit</li>
+        <li><strong>Solution:</strong> Guna handbrake technique</li>
+        <li><strong>Note:</strong> Newer model (2020+) dah better</li>
+      </ul>
+
+      <h3>Perodua Alza D-CVT</h3>
+      <ul>
+        <li><strong>Issue:</strong> Kereta berat, CVT perlu work harder</li>
+        <li><strong>Tips:</strong> Jangan fully load 7 orang + bagasi heavy</li>
+        <li><strong>Servis:</strong> Consider tukar minyak slightly earlier (35k km)</li>
+      </ul>
+
+      <h2>Warranty & Service Support</h2>
+
+      <h3>Perodua Warranty Coverage:</h3>
+      <ul>
+        <li><strong>Basic Warranty:</strong> 3 tahun/100,000km</li>
+        <li><strong>CVT Warranty:</strong> 5 tahun/150,000km (extended)</li>
+        <li><strong>Condition:</strong> Mesti servis at authorized Perodua center</li>
+      </ul>
+
+      <h3>Bila Claim Warranty?</h3>
+      <ul>
+        <li>CVT jerking yang teruk</li>
+        <li>Warning light menyala tanpa sebab</li>
+        <li>Loss of power yang ketara</li>
+        <li>Bunyi abnormal dari CVT</li>
+      </ul>
+
+      <p><strong>Tip:</strong> Simpan semua service record untuk warranty claim!</p>
+
+      <h2>Bila Perlu Repair vs Bila Perlu Replace</h2>
+
+      <h3>Repair CVT Jika:</h3>
+      <ul>
+        <li>Masalah minor (sensor, solenoid)</li>
+        <li>Minyak issue sahaja</li>
+        <li>Software/ECU problem</li>
+        <li>Mileage rendah (below 100k km)</li>
+        <li>Kos repair below RM 2,000</li>
+      </ul>
+
+      <h3>Consider Replace/Recon Jika:</h3>
+      <ul>
+        <li>CVT belt dah rosak</li>
+        <li>Slip yang very teruk</li>
+        <li>Mileage tinggi (above 150k km)</li>
+        <li>Kos repair hampir sama dengan recon unit</li>
+        <li>Multiple component rosak</li>
+      </ul>
+
+      <h2>Kos Repair CVT Perodua</h2>
+
+      <table>
+        <tr>
+          <th>Jenis Repair</th>
+          <th>Kos (RM)</th>
+        </tr>
+        <tr>
+          <td>Software Update</td>
+          <td>FOC - 150</td>
+        </tr>
+        <tr>
+          <td>Tukar Minyak CVT</td>
+          <td>300 - 450</td>
+        </tr>
+        <tr>
+          <td>Tukar Sensor</td>
+          <td>200 - 500</td>
+        </tr>
+        <tr>
+          <td>Tukar Solenoid</td>
+          <td>400 - 800</td>
+        </tr>
+        <tr>
+          <td>Overhaul CVT</td>
+          <td>3,000 - 4,500</td>
+        </tr>
+        <tr>
+          <td>CVT Recon Unit</td>
+          <td>3,500 - 5,000</td>
+        </tr>
+        <tr>
+          <td>CVT Brand New</td>
+          <td>6,000 - 8,000</td>
+        </tr>
+      </table>
+
+      <h2>Kesimpulan</h2>
+
+      <p>CVT Perodua (D-CVT) secara keseluruhannya adalah reliable jika dijaga dengan baik. Masalah yang paling biasa seperti jerking dan bunyi whining boleh dielakkan dengan:</p>
+
+      <ul>
+        <li>✅ Tukar minyak CVT on time (40,000km)</li>
+        <li>✅ Software update when available</li>
+        <li>✅ Drive dengan smooth and consistent</li>
+        <li>✅ Jangan overload atau abuse</li>
+        <li>✅ Servis at proper workshop</li>
+      </ul>
+
+      <p><strong>Ingat:</strong> CVT Perodua datang dengan 5 tahun warranty, jadi gunakan sepenuhnya! Jika ada masalah dalam warranty period, claim di Perodua service center.</p>
+
+      <p>Untuk repair di luar warranty, pilih bengkel specialist CVT yang faham Perodua system. Hubungi <strong>One X Transmission Shah Alam</strong> untuk diagnosis percuma dan quotation terbaik untuk CVT Perodua anda!</p>
+    `,
+    image: 'service-diagnosis.jpg',
+    category: 'Jenama Kereta',
+    date: '20 Oktober 2024',
+    readTime: '6 minit bacaan',
+    author: 'Pakar Gearbox Team',
+    tags: ['Perodua', 'Myvi', 'Axia', 'Bezza', 'CVT', 'D-CVT']
+  },
+  {
+    id: 6,
+    slug: '15-tahun-pakar-gearbox-shah-alam',
+    title: 'Kisah Kejayaan: 15 Tahun Pakar Gearbox di Shah Alam',
+    excerpt: 'Perjalanan One X Transmission sebagai bengkel pakar gearbox terpercaya di Shah Alam. Lebih 5000 pelanggan berpuas hati dengan servis kami.',
+    content: `
+      <h2>Permulaan Kami</h2>
+      <p>Pada tahun 2009, One X Transmission bermula sebagai bengkel kecil dengan satu misi simple: <strong>memberikan servis gearbox terbaik di Shah Alam dengan harga yang berpatutan dan transparent</strong>.</p>
+
+      <p>Pada masa itu, ramai pemilik kereta mengalami masalah dengan bengkel gearbox yang:</p>
+      <ul>
+        <li>Overcharge tanpa explanation yang jelas</li>
+        <li>Guna spare parts yang tidak berkualiti</li>
+        <li>Tiada warranty proper</li>
+        <li>Servis yang mengambil masa terlalu lama</li>
+        <li>Kurang transparent tentang masalah sebenar</li>
+      </ul>
+
+      <p>Kami tahu ada cara yang lebih baik. Dan itulah yang kami buat selama 15 tahun ini.</p>
+
+      <h2>Perjalanan 15 Tahun</h2>
+
+      <h3>2009-2011: Tahun-Tahun Awal</h3>
+      <p>Bermula dengan hanya 2 orang technician dan peralatan basic, kami fokus untuk:</p>
+      <ul>
+        <li>Belajar setiap jenis gearbox dengan detail</li>
+        <li>Build reputation melalui quality work</li>
+        <li>Word-of-mouth dari pelanggan berpuas hati</li>
+        <li>Invest dalam training dan tools yang betul</li>
+      </ul>
+
+      <p><strong>Milestone Pertama:</strong> Dalam tahun pertama, kami berjaya servis lebih 100 gearbox dengan 95% customer satisfaction rate.</p>
+
+      <h3>2012-2014: Pengembangan</h3>
+      <p>Demand meningkat, dan kami expand operation kami:</p>
+      <ul>
+        <li>Tambah 3 lagi technician berpengalaman</li>
+        <li>Upgrade workshop dengan diagnostic tools moden</li>
+        <li>Mulai specialize dalam CVT transmission</li>
+        <li>Partnership dengan suppliers untuk quality parts</li>
+      </ul>
+
+      <p><strong>Achievement:</strong> Jadi bengkel gearbox pilihan untuk Honda dan Toyota owners di Shah Alam.</p>
+
+      <h3>2015-2017: Menjadi Specialist</h3>
+      <p>Kami invest heavily dalam training dan equipment:</p>
+      <ul>
+        <li>Send technicians untuk training di Japan</li>
+        <li>Beli diagnostic equipment terkini</li>
+        <li>Specialize dalam CVT dan automatic transmission</li>
+        <li>Develop SOP untuk setiap jenis gearbox</li>
+      </ul>
+
+      <p><strong>Recognition:</strong> Featured dalam majalah automotif sebagai "CVT Specialist Terbaik di Selangor".</p>
+
+      <h3>2018-2020: Era Digital</h3>
+      <p>Kami embrace teknologi untuk better serve customers:</p>
+      <ul>
+        <li>Launch website untuk booking online</li>
+        <li>WhatsApp consultation service</li>
+        <li>Digital diagnostic reports untuk customers</li>
+        <li>Video updates untuk major repairs</li>
+      </ul>
+
+      <p><strong>Pandemic Challenge:</strong> Semasa COVID-19, kami maintain operation dengan strict SOP dan berikan discount special untuk frontliners.</p>
+
+      <h3>2021-2024: Growth & Innovation</h3>
+      <p>Terus berkembang dan improve:</p>
+      <ul>
+        <li>Expand workshop space 2x lebih besar</li>
+        <li>Team now consist of 10 trained technicians</li>
+        <li>Investment dalam ECO-friendly disposal system</li>
+        <li>Partnership dengan insurance companies</li>
+      </ul>
+
+      <p><strong>Proud Moment:</strong> Mencapai 5,000th satisfied customer pada 2023!</p>
+
+      <h2>Apa Yang Membuatkan Kami Berbeza?</h2>
+
+      <h3>1. Transparent Pricing</h3>
+      <p>Kami percaya customers deserve to know exactly apa yang mereka bayar:</p>
+      <ul>
+        <li>Written quotation sebelum mula kerja</li>
+        <li>Breakdown detail untuk setiap item</li>
+        <li>No hidden charges</li>
+        <li>Explanation yang jelas untuk setiap repair</li>
+      </ul>
+
+      <h3>2. Quality Parts</h3>
+      <p>Kami hanya guna spare parts yang quality:</p>
+      <ul>
+        <li>Original equipment (OE) parts bila possible</li>
+        <li>OEM parts dari trusted suppliers</li>
+        <li>Warranty untuk semua parts installed</li>
+        <li>Option untuk customer pilih parts level</li>
+      </ul>
+
+      <h3>3. Expert Technicians</h3>
+      <p>Team kami bukan sekadar mechanic biasa:</p>
+      <ul>
+        <li>Minimum 5 tahun experience dalam gearbox</li>
+        <li>Regular training dan upskilling</li>
+        <li>Specialist untuk different types of transmission</li>
+        <li>Passion untuk automotive engineering</li>
+      </ul>
+
+      <h3>4. Comprehensive Warranty</h3>
+      <p>Kami stand behind our work:</p>
+      <ul>
+        <li><strong>Parts:</strong> 6 bulan - 1 tahun warranty</li>
+        <li><strong>Workmanship:</strong> 3 - 6 bulan warranty</li>
+        <li><strong>Mileage:</strong> Up to 20,000km warranty (for major overhaul)</li>
+        <li><strong>Free follow-up:</strong> Check-up percuma dalam 1 bulan</li>
+      </ul>
+
+      <h3>5. Customer Service</h3>
+      <p>Kami treat every customer macam family:</p>
+      <ul>
+        <li>Friendly dan patient explanation</li>
+        <li>Regular updates during repair</li>
+        <li>WhatsApp support 7 days a week</li>
+        <li>After-sales support dan advice</li>
+      </ul>
+
+      <h2>Servis Yang Kami Tawarkan</h2>
+
+      <h3>Gearbox Automatik</h3>
+      <ul>
+        <li>Diagnosis dan troubleshooting</li>
+        <li>ATF service (drain & fill atau flush)</li>
+        <li>Solenoid replacement</li>
+        <li>Valve body repair/reconditioning</li>
+        <li>Torque converter replacement</li>
+        <li>Complete overhaul dan rebuild</li>
+      </ul>
+
+      <h3>CVT Transmission</h3>
+      <ul>
+        <li>CVT fluid service</li>
+        <li>CVT belt/chain replacement</li>
+        <li>Pulley reconditioning</li>
+        <li>CVT control module repair</li>
+        <li>Complete CVT overhaul</li>
+        <li>CVT recon unit installation</li>
+      </ul>
+
+      <h3>DSG/DCT</h3>
+      <ul>
+        <li>DSG service (oil & filter)</li>
+        <li>Clutch pack replacement</li>
+        <li>Mechatronic unit repair</li>
+        <li>Software update dan adaptation</li>
+      </ul>
+
+      <h3>Gearbox Manual</h3>
+      <ul>
+        <li>Clutch set replacement</li>
+        <li>Syncromesh repair</li>
+        <li>Gear replacement</li>
+        <li>Bearing dan seal replacement</li>
+      </ul>
+
+      <h2>Customer Success Stories</h2>
+
+      <h3>Case Study 1: Honda City CVT (2019)</h3>
+      <p><strong>Problem:</strong> CVT slip teruk, dealer quote RM 12,000 untuk replace unit baharu.</p>
+      <p><strong>Our Solution:</strong> Diagnostic mendapati hanya valve body dan solenoid bermasalah. Repair dengan kos RM 2,500 sahaja.</p>
+      <p><strong>Result:</strong> Customer jimat RM 9,500 dan gearbox masih berfungsi perfect selepas 40,000km.</p>
+
+      <h3>Case Study 2: Perodua Myvi D-CVT (2021)</h3>
+      <p><strong>Problem:</strong> Jerking teruk, service center tak dapat solve walaupun dah 3 kali visit.</p>
+      <p><strong>Our Solution:</strong> Software update kombinasi dengan CVT flush dan throttle body cleaning.</p>
+      <p><strong>Result:</strong> Masalah solve sepenuhnya, customer sangat berpuas hati.</p>
+
+      <h3>Case Study 3: Toyota Vios Auto (2015)</h3>
+      <p><strong>Problem:</strong> Gearbox delay engagement, customer risau perlu overhaul.</p>
+      <p><strong>Our Solution:</strong> Cuma perlu ATF flush dan tukar solenoid set.</p>
+      <p><strong>Result:</strong> Kos hanya RM 1,200 berbanding overhaul RM 5,000.</p>
+
+      <h2>Testimoni Pelanggan</h2>
+
+      <blockquote>
+        <p>"Saya dah try 3 bengkel sebelum jumpa One X. Dorang honest, transparent, dan quote reasonable. Dah 2 tahun lepas overhaul, gearbox masih perfect!" <strong>- Ahmad, Honda Civic owner</strong></p>
+      </blockquote>
+
+      <blockquote>
+        <p>"Best bengkel! Explain dengan detail, update progress via WhatsApp, dan harga berpatutan. Warranty pun proper. Highly recommended!" <strong>- Sarah, Myvi owner</strong></p>
+      </blockquote>
+
+      <blockquote>
+        <p>"Gearbox Nissan saya dah nak give up. Tapi lepas One X repair, dah ok! Technician sangat professional dan knowledgeable." <strong>- Kumar, Nissan Almera owner</strong></p>
+      </blockquote>
+
+      <h2>Pencapaian Kami</h2>
+
+      <h3>15 Tahun dalam Industri</h3>
+      <ul>
+        <li>✅ 5,000+ pelanggan berpuas hati</li>
+        <li>✅ 8,000+ gearbox repaired/serviced</li>
+        <li>✅ 95% customer satisfaction rate</li>
+        <li>✅ 80% repeat customers dan referrals</li>
+        <li>✅ 4.8/5.0 rating di Google Reviews</li>
+      </ul>
+
+      <h3>Specialist dalam:</h3>
+      <ul>
+        <li>Honda CVT (City, Jazz, Civic, HR-V, CR-V)</li>
+        <li>Toyota CVT & Automatic (Vios, Altis, Camry)</li>
+        <li>Nissan CVT (Almera, X-Trail, Serena)</li>
+        <li>Perodua D-CVT (Myvi, Axia, Bezza, Alza)</li>
+        <li>Proton Auto/CVT (Saga, Persona, X50, X70)</li>
+        <li>VW DSG (Polo, Golf, Passat)</li>
+      </ul>
+
+      <h2>Kenapa Pilih One X Transmission?</h2>
+
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>One X Transmission</th>
+          <th>Bengkel Biasa</th>
+        </tr>
+        <tr>
+          <td>Experience</td>
+          <td>15+ tahun specialist</td>
+          <td>Vary</td>
+        </tr>
+        <tr>
+          <td>Diagnostic Tools</td>
+          <td>Latest equipment</td>
+          <td>Basic tools</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td>100% transparent</td>
+          <td>Sometimes hidden cost</td>
+        </tr>
+        <tr>
+          <td>Warranty</td>
+          <td>Up to 1 year</td>
+          <td>3 months atau no warranty</td>
+        </tr>
+        <tr>
+          <td>Parts Quality</td>
+          <td>OE/OEM quality</td>
+          <td>Mix quality</td>
+        </tr>
+        <tr>
+          <td>Customer Support</td>
+          <td>7 days WhatsApp support</td>
+          <td>Limited support</td>
+        </tr>
+      </table>
+
+      <h2>Komitmen Kami untuk Masa Hadapan</h2>
+
+      <p>Selepas 15 tahun, kami tidak berhenti di situ. Kami commit untuk:</p>
+
+      <ul>
+        <li>Terus invest dalam latest technology</li>
+        <li>Regular training untuk team</li>
+        <li>Expand servis untuk EV transmissions</li>
+        <li>Improve customer experience</li>
+        <li>Maintain quality dan integrity kami</li>
+      </ul>
+
+      <h2>Lokasi & Waktu Operasi</h2>
+
+      <h3>One X Transmission Shah Alam</h3>
+      <p><strong>Alamat:</strong> [Your Address], Shah Alam, Selangor 40460</p>
+      <p><strong>Waktu Operasi:</strong></p>
+      <ul>
+        <li>Isnin - Jumaat: 9:00 AM - 6:00 PM</li>
+        <li>Sabtu: 9:00 AM - 3:00 PM</li>
+        <li>Ahad: Tutup (Emergency boleh call)</li>
+      </ul>
+
+      <h3>Hubungi Kami</h3>
+      <ul>
+        <li><strong>Phone:</strong> +60 11-3105 1677</li>
+        <li><strong>WhatsApp:</strong> +60 11-3105 1677</li>
+        <li><strong>Email:</strong> info@onextransmission.com</li>
+      </ul>
+
+      <h2>Special Offers untuk Anda</h2>
+
+      <h3>Untuk New Customers:</h3>
+      <ul>
+        <li>🎁 FREE diagnostic scan (worth RM 150)</li>
+        <li>🎁 FREE consultation</li>
+        <li>🎁 10% discount untuk first service</li>
+      </ul>
+
+      <h3>Untuk Regular Customers:</h3>
+      <ul>
+        <li>💎 Loyalty card program</li>
+        <li>💎 Priority booking</li>
+        <li>💎 Special rates untuk major service</li>
+      </ul>
+
+      <h2>Kesimpulan</h2>
+
+      <p>15 tahun adalah perjalanan yang panjang, tapi kami baru bermula. Setiap gearbox yang kami repair, setiap customer yang berpuas hati, adalah motivation untuk kami terus improve dan berikan servis terbaik.</p>
+
+      <p>Terima kasih kepada semua pelanggan yang mempercayai kami selama ini. Kami janji akan terus memberikan:</p>
+
+      <ul>
+        <li>✅ Quality service yang consistent</li>
+        <li>✅ Honest dan transparent dealings</li>
+        <li>✅ Fair pricing</li>
+        <li>✅ Expert advice</li>
+        <li>✅ After-sales support</li>
+      </ul>
+
+      <p><strong>Ada masalah gearbox?</strong> Jangan risau. Hubungi kami hari ini untuk diagnosis percuma dan quotation. Dengan 15 tahun pengalaman, kami confident boleh solve masalah gearbox anda!</p>
+
+      <p className="text-center mt-8"><em>"Your Trusted Gearbox Specialist in Shah Alam Since 2009"</em></p>
+    `,
+    image: 'service-overhaul.jpg',
+    category: 'Profil Kami',
+    date: '15 Oktober 2024',
+    readTime: '5 minit bacaan',
+    author: 'One X Transmission',
+    tags: ['Profil', 'Company', 'Shah Alam', 'Bengkel', 'Specialist']
   }
 ]
 
@@ -329,6 +1735,12 @@ export default function BlogPostPage() {
   const phoneNumber = '+601131051677'
 
   const [showShareMenu, setShowShareMenu] = useState(false)
+
+  // SEO - Generate dynamic meta tags based on post
+  const pageTitle = post ? `${post.title} | Blog Pakar Gearbox Shah Alam` : 'Artikel Tidak Dijumpai | Blog Pakar Gearbox'
+  const pageDescription = post ? post.excerpt : 'Artikel lengkap tentang gearbox CVT, automatik & manual dari pakar gearbox terpercaya di Shah Alam'
+  const pageUrl = `https://onextransmission.com/blog/${slug}`
+  const pageImage = post ? `https://onextransmission.com${post.image}` : 'https://onextransmission.com/images/blog-og-default.jpg'
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -373,10 +1785,101 @@ export default function BlogPostPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Header currentPage="blog" />
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={post ? post.tags.join(', ') : 'gearbox malaysia'} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:locale" content="ms_MY" />
+        {post && <meta property="article:published_time" content={post.date} />}
+        {post && <meta property="article:author" content={post.author} />}
+        {post && post.tags.map(tag => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content={post ? post.author : 'One X Transmission'} />
+        <link rel="canonical" href={pageUrl} />
+        
+        {/* Schema.org structured data */}
+        {post && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "image": `https://onextransmission.com${post.image}`,
+              "author": {
+                "@type": "Organization",
+                "name": post.author
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "One X Transmission Shah Alam",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://onextransmission.com/images/logo.png"
+                }
+              },
+              "datePublished": post.date,
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": pageUrl
+              },
+              "inLanguage": "ms-MY"
+            })}
+          </script>
+        )}
+        
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Utama",
+                "item": "https://onextransmission.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://onextransmission.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post ? post.title : "Artikel",
+                "item": pageUrl
+              }
+            ]
+          })}
+        </script>
+      </Head>
 
-      {/* Article Hero */}
+      <div className="min-h-screen bg-black text-white">
+        <Header currentPage="blog" />
+
+        {/* Article Hero */}
       <section className="py-12 bg-gradient-to-br from-red-900/20 via-black to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -497,18 +2000,22 @@ export default function BlogPostPage() {
                 {/* Article Content */}
                 <div 
                   className="prose prose-invert prose-red max-w-none 
-                    prose-headings:text-white prose-headings:font-bold prose-headings:mb-4
-                    prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-6 prose-h2:text-red-400 prose-h2:border-b prose-h2:border-red-900/30 prose-h2:pb-2
-                    prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-4 prose-h3:text-red-300
-                    prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4 prose-p:text-base
-                    prose-li:text-gray-300 prose-li:mb-2 prose-li:leading-relaxed
-                    prose-ul:mb-6 prose-ol:mb-6 prose-ul:pl-6 prose-ol:pl-6
-                    prose-li:marker:text-red-500
-                    prose-strong:text-white prose-strong:font-semibold
-                    prose-table:text-gray-300 prose-table:border prose-table:border-gray-700
-                    prose-th:bg-gray-800 prose-th:text-red-400 prose-th:font-bold prose-th:p-3 prose-th:border prose-th:border-gray-700
-                    prose-td:p-3 prose-td:border prose-td:border-gray-700
-                    prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-400"
+                    prose-headings:text-white prose-headings:font-bold
+                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-red-400 prose-h2:border-b-2 prose-h2:border-red-900/40 prose-h2:pb-3
+                    prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-red-300
+                    prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-gray-200
+                    prose-p:text-gray-300 prose-p:leading-[1.8] prose-p:mb-6 prose-p:text-base
+                    prose-li:text-gray-300 prose-li:mb-3 prose-li:leading-[1.8]
+                    prose-ul:mb-8 prose-ol:mb-8 prose-ul:pl-6 prose-ol:pl-6 prose-ul:space-y-2 prose-ol:space-y-2
+                    prose-li:marker:text-red-500 prose-li:marker:font-bold
+                    prose-strong:text-white prose-strong:font-semibold prose-strong:bg-red-900/10 prose-strong:px-1
+                    prose-table:w-full prose-table:text-gray-300 prose-table:border-collapse prose-table:my-8
+                    prose-th:bg-gradient-to-r prose-th:from-red-900/40 prose-th:to-red-800/30 prose-th:text-red-300 prose-th:font-bold prose-th:p-4 prose-th:border prose-th:border-gray-700 prose-th:text-left
+                    prose-td:p-4 prose-td:border prose-td:border-gray-700 prose-td:bg-gray-900/50
+                    prose-tr:hover:bg-gray-800/30
+                    prose-blockquote:border-l-4 prose-blockquote:border-red-500 prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:my-6 prose-blockquote:italic prose-blockquote:text-gray-400 prose-blockquote:bg-red-900/5
+                    prose-code:text-red-400 prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded
+                    first:prose-p:text-lg first:prose-p:text-gray-200 first:prose-p:leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
@@ -695,5 +2202,6 @@ export default function BlogPostPage() {
         <MessageCircle className="w-6 h-6 text-white" />
       </motion.a>
     </div>
+    </>
   )
 }
