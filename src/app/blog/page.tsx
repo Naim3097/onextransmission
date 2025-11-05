@@ -141,7 +141,7 @@ export default function BlogPage() {
           >
             <motion.h1 
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight"
             >
               Panduan Lengkap{' '}
               <span className="text-red-500">Gearbox</span>
@@ -151,7 +151,7 @@ export default function BlogPage() {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light"
             >
               Tips penyelenggaraan, panduan masalah gearbox, maklumat kos, dan cerita kejayaan 
               dari pakar gearbox terpercaya di Shah Alam dengan lebih 15 tahun pengalaman.
