@@ -141,7 +141,12 @@ export default function BlogPage() {
           >
             <motion.h1 
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight"
+              style={{ 
+                fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 300,
+                letterSpacing: '-0.025em'
+              }}
+              className="text-4xl md:text-5xl lg:text-6xl leading-tight"
             >
               Panduan Lengkap{' '}
               <span className="text-red-500">Gearbox</span>
@@ -151,7 +156,12 @@ export default function BlogPage() {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light"
+              style={{ 
+                fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 300,
+                lineHeight: '1.625'
+              }}
+              className="text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto"
             >
               Tips penyelenggaraan, panduan masalah gearbox, maklumat kos, dan cerita kejayaan 
               dari pakar gearbox terpercaya di Shah Alam dengan lebih 15 tahun pengalaman.
@@ -207,10 +217,10 @@ export default function BlogPage() {
       <section className="py-16 md:py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+            key={selectedCategory}
             variants={staggerChildren}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           >
             {filteredPosts.map((post) => (
